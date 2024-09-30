@@ -78,58 +78,42 @@
 <section id="contact-section">
     <div class="form-container">
         <!-- Modulo di Contatto -->
-        <section id="contact">
-            <h2 id="contact-title">Contattaci</h2>
-            <p id="contact-description">Compila il modulo sottostante per inviarci un messaggio.</p>
+        <section class="application">
+            <h2 id="application-title"></h2>
+            <p id="application-description"></p>
             <form id="contact-form">
-                <label for="name">Nome:</label>
+                <label id="application-name" for="name"></label>
                 <input type="text" id="name" name="name" required>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label id="application-email" for="email"></label>
+                <input type="email"  name="email" required>
                 
-                <label for="message">Messaggio:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label id="application-message" for="message"></label>
+                <textarea name="message" rows="4" required></textarea>
                 
-                <button type="submit">Send</button>
+                <button id="application-submit" type="submit"></button>
             </form>
         </section>
 
         <!-- Box con la scritta "oppure" -->
-        <div id="or-box">oppure</div>
+            <div id="or-box">
+                <p id="application-or"></p>
+            </div>
 
         <!-- Modulo Informazioni di Contatto -->
         <section id="contact-info">
-            <h2>Informazioni di Contatto</h2>
+            <h2 id="application-infocontact"></h2>
             <div>
-                <h3>Email</h3>
-                <a href="mailto:example@example.com">example@example.com</a>
+                <h3 id="application-ormail"></h3>
+                <a href="mailto:example@example.com">prova@prova.com</a>
             </div>
             <div>
-                <h3>Chiamaci</h3>
+                <h3 id="application-orcall"></h3>
                 <a href="tel:+1234567890">+123 456 7890</a>
             </div>
         </section>
     </div>
 </section>
-
-
-
-
-    <!-- Application Section -->
-    <section id="forum">
-        <h2 id="application-title"></h2>
-        <p id="application-description"></p>
-    </section>
-
-    <!-- FAQ Section -->
-    <!-- <section id="faq">
-        <h2 id="faq-title"></h2>
-        <p id="faq-description"></p>
-    </section> -->
-
-    <div include-html="faqQuestions.html"></div>
-
 
     <!-- Script to load translations -->
     <script src="js/translations.js"></script>

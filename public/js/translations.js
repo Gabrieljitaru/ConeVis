@@ -60,12 +60,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('card-construction-description').textContent = translations.services.cards.construction.description;
 
                 // Contact Section
-                document.getElementById('contact-title').textContent = translations.contact.title;
-                document.getElementById('contact-description').textContent = translations.contact.description;
+                // document.getElementById('contact-title').textContent = translations.contact.title;
+                // document.getElementById('contact-description').textContent = translations.contact.description;
 
                 // Application Section
                 document.getElementById('application-title').textContent = translations.application.title;
                 document.getElementById('application-description').textContent = translations.application.description;
+                document.getElementById('application-name').textContent = translations.application.name;
+                document.getElementById('application-email').textContent = translations.application.email;
+                document.getElementById('application-message').textContent = translations.application.message;
+                document.getElementById('application-submit').textContent = translations.application.submit;
+                document.getElementById('application-or').textContent = translations.application.or;
+                document.getElementById('application-infocontact').textContent = translations.application.infocontact;
+                document.getElementById('application-orcall').textContent = translations.application.orcall;
+                document.getElementById('application-ormail').textContent = translations.application.ormail;
 
                 // FAQ Section
                 document.getElementById('faqpage-title').textContent = translations.faqpage.title;

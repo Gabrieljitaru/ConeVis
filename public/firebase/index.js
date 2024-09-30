@@ -62,8 +62,16 @@ const translations = {
             "description": "Contact Information..."
         },
         "application": {
-            "title": "Application Form",
-            "description": "Form for applications..."
+            "title": "Tell us what you like to do!",
+            "description": "We will contact you with a tailored idea.",
+            "name": "Name:",
+            "email": "Email:",
+            "message": "Message:",
+            "submit": "Send",
+            "or": "Or",
+            "ormail":"Send a mail",
+            "orcall": "Call Us",
+            "infocontact":"Choose another method:"
         },
         "faq": {
             "title": "FAQ",
@@ -149,8 +157,16 @@ const translations = {
             "description": "Informazioni di contatto..."
         },
         "application": {
-            "title": "Modulo di Candidatura",
-            "description": "Modulo per candidature..."
+            "title": "Dicci cosa ti piace fare!",
+            "description": "Ti contatteremo con un'idea personalizzata.",
+            "name": "Nome:",
+            "email": "Email:",
+            "message": "Messaggio:",
+            "submit": "Invia",
+            "or": "Oppure",
+            "ormail":"Manda una mail",
+            "orcall": "Chiamaci",
+            "infocontact":"Scegli un altro metodo:"
         },
         "faq": {
             "title": "FAQ",
@@ -235,9 +251,18 @@ const translations = {
             "description": "Informații de contact..."
         },
         "application": {
-            "title": "Formular de Aplicare",
-            "description": "Formular pentru aplicare..."
+            "title": "Spune-ne ce îți place să faci!",
+            "description": "Te vom contacta cu o idee personalizată.",
+            "name": "Nume:",
+            "email": "Email:",
+            "message": "Mesaj:",
+            "submit": "Trimite",
+            "or": "Sau",
+            "ormail":"Trimite un mail",
+            "orcall": "Sună-ne",
+            "infocontact":"Alege o altă variantă:"
         },
+
         "faq": {
             "title": "FAQ",
             "description": "Întrebări frecvente..."

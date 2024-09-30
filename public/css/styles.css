@@ -6,7 +6,7 @@
 
 /* Stili per la barra di navigazione */
 .navbar {
-    background: rgba(143, 88, 246, 0.8); /* Sfondo scuro traslucido */
+    background: rgba(143, 88, 246, 1); /* Sfondo scuro traslucido */
     position: fixed; /* Fissa la barra di navigazione in alto */
     width: 100%; /* Larghezza completa */
     top: 0; /* Posiziona in alto */
@@ -47,7 +47,7 @@
 
 #language-select {
     margin-left: 10px; /* Spazio tra il link e il selettore */
-    background-color: rgba(143, 88, 246, 0.8); /* Sfondo scuro per il selettore */
+    background-color: rgb(126, 66, 238); /* Sfondo scuro per il selettore */
     color: white; /* Testo bianco */
     border: none; /* Rimuove il bordo di default */
     border-radius: 5px; /* Angoli arrotondati */
@@ -239,39 +239,56 @@ body {
 
 /* //////////////////////////////////////// faq  */
 
-.faq-section {
-    padding: 50px;
-    background: #f4f4f4;
-    text-align: center;
+#faqpage-title {
+    text-align: center; /* Centra il testo orizzontalmente */
+    font-size: 28px; /* Regola la dimensione del titolo, se necessario */
+    font-weight: bold; /* Rende il testo più marcato */
+    margin-bottom: 20px; /* Aggiungi spazio sotto il titolo */
+    color: #333333; /* Cambia il colore del titolo se lo desideri */
 }
 
-.faq-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+/* Stile generale per la sezione FAQ */
+.faqpage-section {
+    padding: 30px;
+    background-color: #f4f4f4;
 }
 
+/* Stile per la lista delle FAQ */
 .faq-list {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spazio tra ogni domanda/risposta */
 }
 
-.faq {
-    background: white;
+/* Stile per ciascuna FAQ (domanda + risposta) */
+.faq-item {
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-radius: 20%; /* Bordi arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura per un effetto di profondità */
+    border: 1px solid #e0e0e0; /* Colore del bordo */
+    transition: transform 0.2s ease-in-out;
 }
 
-.faq h2 {
-    font-size: 1.5rem;
+.faq-item:hover {
+    transform: scale(1.02); /* Leggero ingrandimento quando l'elemento viene passato sopra */
+}
+
+/* Stile per le domande */
+.faq-item h2 {
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 10px;
+    color: #333333;
 }
 
-.faq p {
-    font-size: 1.1rem;
+/* Stile per le risposte */
+.faq-item p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
 }
+
 
 /* //////////////////////////////////////////// Servizi */
 
@@ -327,8 +344,8 @@ body {
 /* ///////////////////////////////////////////// Contact form */
 /* Container principale con Flexbox */
 #contact-section {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 30px;
+    background-color: #f4f4f4;
 }
 
 .form-container {
@@ -343,8 +360,8 @@ body {
 .form-container section {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(107, 1, 255, 0.1);
     width: 45%; /* Imposta larghezza per permettere che stiano affiancati */
     text-align: center;
 }
@@ -362,7 +379,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     z-index: 1; /* Assicura che si sovrapponga agli altri elementi */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(107, 1, 255, 0.1);
 }
 
 /* Titoli dei moduli */
@@ -394,8 +411,9 @@ body {
     margin-bottom: 15px;
     border-radius: 20px;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #eae7e7;
     color: #333;
+    border: 0px solid #686666; /* Imposta un bordo sottile */
 }
 
 #contact-form button {
@@ -407,7 +425,7 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    width: 50%;
+    width: 30%;
 }
 
 #contact-form button:hover {
