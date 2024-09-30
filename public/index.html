@@ -20,7 +20,7 @@
         <div class="hero-content" id="hero">
             <img id="hero-logo" src="images/logo.png" alt="Logo">
             <p id="hero-subtitle" class="hero-subtitle"></p><br>
-            <a href="services" class="cta-button" id="hero-cta"></a> 
+            <a href="services" class="cta-button" id="hero-cta"></a>
         </div>
     </section>
 
@@ -52,7 +52,7 @@
                     <h3 id="card-warehouse-title"></h3>
                     <p id="card-warehouse-description"></p>
                 </a>
-                <a class="card" href="index.html"  id="button-waitstaff" onclick="handleClick('waitstaff')">
+                <a class="card" href="index.html" id="button-waitstaff" onclick="handleClick('waitstaff')">
                     <h3 id="card-waitstaff-title"></h3>
                     <p id="card-waitstaff-description">Opportunities in hospitality as waitstaff across Europe.</p>
                 </a>
@@ -81,17 +81,17 @@
         <form id="contact-form">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message">Messaggio:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            
+
             <button type="submit">Send</button>
         </form>
     </section>
-    
+
 
     <!-- Application Section -->
     <section id="forum">
@@ -111,6 +111,51 @@
     <!-- Script to load translations -->
     <script src="js/translations.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita il refresh della pagina
+
+    // Raccoglie i dati del form
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Crea l'oggetto da inviare
+    const newContact = {
+        nome: name,
+        email: email,
+        messaggio: message,
+        timestamp: Date.now()
+    };
+
+    // Esegui la richiesta POST al tuo database Firebase
+    fetch('https://conevishs-default-rtdb.firebaseio.com/contatti.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newContact)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('I dati sono stati inviati con successo!');
+            document.getElementById('contact-form').reset();
+        } else {
+            alert('Si è verificato un errore durante l\'invio dei dati.');
+        }
+    })
+    .catch(error => {
+        console.error('Errore durante l\'invio dei dati:', error);
+    });
+});
+
+    </script>
+
 
 </body>
 

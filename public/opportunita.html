@@ -14,27 +14,6 @@
 
 <body>
 
-    <!-- Navigation (uguale alla pagina principale) -->
-
-    <!-- Modulo per aggiungere offerte di lavoro -->
-    <section class="add-job">
-        <h2>Aggiungi un'Offerta di Lavoro</h2>
-        <form id="jobForm">
-            <div>
-                <label for="jobTitle">Titolo Offerta:</label>
-                <input type="text" id="jobTitle" required>
-            </div>
-            <div>
-                <label for="jobDescription">Descrizione:</label>
-                <textarea id="jobDescription" required></textarea>
-            </div>
-            <div>
-                <label for="jobLocation">Località:</label>
-                <input type="text" id="jobLocation" required>
-            </div>
-            <button type="submit">Aggiungi Offerta</button>
-        </form>
-    </section>
 
     <!-- Sezione per visualizzare le offerte di lavoro -->
     <section class="jobs">
@@ -49,51 +28,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-        // Inizializza Firebase utilizzando l'URL pubblico
-        const database = firebase.database("https://conevishs-default-rtdb.firebaseio.com/");
+       
 
-        // Funzione per aggiungere un'offerta di lavoro
-        document.getElementById('jobForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            
-            const jobTitle = document.getElementById('jobTitle').value;
-            const jobDescription = document.getElementById('jobDescription').value;
-            const jobLocation = document.getElementById('jobLocation').value;
-    
-            const newJob = {
-                title: jobTitle,
-                description: jobDescription,
-                location: jobLocation,
-                timestamp: new Date().toISOString()
-            };
-    
-            // Salva l'offerta di lavoro nella tabella JobOffers
-            database.ref('JobOffers').push(newJob);
-            document.getElementById('jobForm').reset();
-        });
-    
-        // Funzione per visualizzare le offerte di lavoro
-        database.ref('JobOffers').on('value', function (snapshot) {
-            const jobListingsDiv = document.getElementById('job-listings');
-            jobListingsDiv.innerHTML = '';  // Svuota la sezione prima di aggiungere le nuove offerte
-    
-            snapshot.forEach(function (childSnapshot) {
-                const jobData = childSnapshot.val();
-    
-                // Crea un elemento per ogni offerta di lavoro
-                const jobCard = document.createElement('div');
-                jobCard.className = 'job-card';
-                jobCard.innerHTML = `
-                    <h3>${jobData.title}</h3>
-                    <p>${jobData.description}</p>
-                    <p><strong>Località:</strong> ${jobData.location}</p>
-                    <p><small>${new Date(jobData.timestamp).toLocaleString()}</small></p>
-                `;
-    
-                // Aggiungi l'offerta di lavoro alla sezione
-                jobListingsDiv.appendChild(jobCard);
-            });
-        });
+        // Funzione per caricare le offerte di lavoro dal database
+        function loadJobs() {
+            fetch('https://conevishs-default-rtdb.firebaseio.com/offerte-di-lavoro.json')
+                .then(response => response.json())
+                .then(data => {
+                    const jobListings = document.getElementById('job-listings');
+                    jobListings.innerHTML = ''; // Pulisce le offerte esistenti
+
+                    for (const key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            const job = data[key];
+                            // Crea un elemento HTML per ogni offerta di lavoro
+                            const jobElement = document.createElement('div');
+                            jobElement.className = 'job-listing';
+                            jobElement.innerHTML = `
+                        <h3>${job.titolo}</h3>
+                        <p>${job.descrizione}</p>
+                        <p><strong>Località:</strong> ${job.località}</p>
+                    `;
+                            jobListings.appendChild(jobElement);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Errore durante il caricamento delle offerte di lavoro:', error);
+                });
+        }
+
+        // Carica le offerte di lavoro al caricamento della pagina
+        document.addEventListener('DOMContentLoaded', loadJobs);
+
     </script>
 
 </body>
