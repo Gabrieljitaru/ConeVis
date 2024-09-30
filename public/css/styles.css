@@ -326,30 +326,41 @@ body {
 
 /* ///////////////////////////////////////////// Contact form */
 
-#contact {
+/* Container che contiene i due moduli affiancati */
+#contact-section {
+    display: flex;
+    justify-content: space-between; /* Spazio tra i due moduli */
+    gap: 20px; /* Spazio tra i moduli */
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-wrap: nowrap; /* Impedisce che i moduli si sovrappongano verticalmente */
+}
+
+/* Stile per entrambi i moduli */
+.form-container section {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 700px; /* Limita la larghezza del modulo */
-    margin: 0 auto; /* Centra il modulo */
-    text-align: center; /* Centra il testo */
+    width: 45%; /* Imposta larghezza per permettere che stiano affiancati */
+    text-align: center;
 }
 
-#contact-title {
+/* Titoli dei moduli */
+#contact-title, #contact-info h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
+/* Descrizione del modulo di contatto */
 #contact-description {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
+/* Stile del modulo di contatto */
 #contact-form {
     display: flex;
-    margin: 0 auto;
-    max-width: 300px;
     flex-direction: column;
     align-items: center; /* Centra gli elementi del modulo */
 }
@@ -360,28 +371,46 @@ body {
 }
 
 #contact-form input, #contact-form textarea {
-    padding: 8px; /* Ridotto il padding */
+    padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200%; /* Ridotto la larghezza dei campi */
-}
-
-#contact-form textarea {
-    width: 200%; /* Assicura che il textarea sia accorciato */
+    border-radius: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 #contact-form button {
+    font-size: 15px;
+    font-weight: bold;
     padding: 10px;
     background-color: #FFD700;
     color: rgb(0, 0, 0);
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
-    width: 70%; /* Rende il pulsante largo come il modulo */
+    width: 50%;
 }
 
 #contact-form button:hover {
     background-color: #e7c403;
 }
 
+/* Stile per le informazioni di contatto */
+#contact-info div {
+    margin-bottom: 15px;
+}
+
+#contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#contact-info a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
