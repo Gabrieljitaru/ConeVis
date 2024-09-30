@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ConeVis | Opportunità di Lavoro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Include Firebase (versione compatibile) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation (uguale alla pagina principale) -->
+
+    <!-- Modulo per aggiungere offerte di lavoro -->
+    <section class="add-job">
+        <h2>Aggiungi un'Offerta di Lavoro</h2>
+        <form id="jobForm">
+            <div>
+                <label for="jobTitle">Titolo Offerta:</label>
+                <input type="text" id="jobTitle" required>
+            </div>
+            <div>
+                <label for="jobDescription">Descrizione:</label>
+                <textarea id="jobDescription" required></textarea>
+            </div>
+            <div>
+                <label for="jobLocation">Località:</label>
+                <input type="text" id="jobLocation" required>
+            </div>
+            <button type="submit">Aggiungi Offerta</button>
+        </form>
+    </section>
+
+    <!-- Sezione per visualizzare le offerte di lavoro -->
+    <section class="jobs">
+        <h1>Offerte di Lavoro Disponibili</h1>
+        <div class="job-listings" id="job-listings">
+            <!-- Le offerte di lavoro verranno caricate qui dinamicamente-->
+        </div>
+    </section>
+
+    <!-- Script to load translations -->
+    <script src="js/translations.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Inizializza Firebase utilizzando l'URL pubblico
+        const database = firebase.database("https://conevishs-default-rtdb.firebaseio.com/");
+
+        // Funzione per aggiungere un'offerta di lavoro
+        document.getElementById('jobForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const jobTitle = document.getElementById('jobTitle').value;
+            const jobDescription = document.getElementById('jobDescription').value;
+            const jobLocation = document.getElementById('jobLocation').value;
+    
+            const newJob = {
+                title: jobTitle,
+                description: jobDescription,
+                location: jobLocation,
+                timestamp: new Date().toISOString()
+            };
+    
+            // Salva l'offerta di lavoro nella tabella JobOffers
+            database.ref('JobOffers').push(newJob);
+            document.getElementById('jobForm').reset();
+        });
+    
+        // Funzione per visualizzare le offerte di lavoro
+        database.ref('JobOffers').on('value', function (snapshot) {
+            const jobListingsDiv = document.getElementById('job-listings');
+            jobListingsDiv.innerHTML = '';  // Svuota la sezione prima di aggiungere le nuove offerte
+    
+            snapshot.forEach(function (childSnapshot) {
+                const jobData = childSnapshot.val();
+    
+                // Crea un elemento per ogni offerta di lavoro
+                const jobCard = document.createElement('div');
+                jobCard.className = 'job-card';
+                jobCard.innerHTML = `
+                    <h3>${jobData.title}</h3>
+                    <p>${jobData.description}</p>
+                    <p><strong>Località:</strong> ${jobData.location}</p>
+                    <p><small>${new Date(jobData.timestamp).toLocaleString()}</small></p>
+                `;
+    
+                // Aggiungi l'offerta di lavoro alla sezione
+                jobListingsDiv.appendChild(jobCard);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

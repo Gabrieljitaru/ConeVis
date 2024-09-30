@@ -1,0 +1,218 @@
+{
+    "en": {
+        "navbar": {
+            "opportunities": "Opportunities",
+            "application_form": "Application Form",
+            "send_mail": "Send a mail",
+            "call_us": "Call us",
+            "faq": "FAQ"
+        },
+        "hero": {
+            "subtitle": "Connecting talent with strength across borders",
+            "presentation": "We are a leading multi-service company in human resources, specializing in placing qualified personnel throughout Europe. We offer tailored career opportunities with a fast and targeted hiring process to connect the right talents with growing businesses.",
+            "bt_cta": "Discover Opportunities"
+        },
+        "services": {
+            "title": "Our Services",
+            "description": "We help connect skilled workers with leading companies in the Netherlands, Italy, and Germany.",
+            "cards": {
+                "flower": {
+                    "title": "Flower & Plant Collection",
+                    "description": "Jobs in agriculture, flower harvesting, and plant management."
+                },
+                "warehouse": {
+                    "title": "Warehouse Workers",
+                    "description": "Logistics, packaging, and warehouse jobs available."
+                },
+                "waitstaff": {
+                    "title": "Waitstaff",
+                    "description": "Opportunities in hospitality as waitstaff across Europe."
+                },
+                "construction": {
+                    "title": "Construction Workers",
+                    "description": "Join construction teams in various international projects."
+                }
+            }
+        },
+        "contact": {
+            "title": "Contacts",
+            "description": "Contact Information..."
+        },
+        "application": {
+            "title": "Application Form",
+            "description": "Form for applications..."
+        },
+        "faq": {
+            "title": "FAQ",
+            "description": "Frequently Asked Questions..."
+        },
+        "faqpage": {
+            "title": "Frequently Asked Questions",
+            "question1": "How does the recruitment process work?",
+            "answer1": "Our recruitment process begins when you submit your application through our website. We will evaluate your profile and contact you if your background matches the open positions. This may be followed by a phone or video interview before being presented directly to the client company.",
+            "question2": "Do I have to pay to use the agency's services?",
+            "answer2": "No, our intermediary services for candidates are completely free. Our fees are paid by the companies seeking qualified personnel.",
+            "question3": "What types of contracts do you offer?",
+            "answer3": "We offer a variety of contract types depending on the position and the client company. This can include fixed-term contracts, permanent contracts, or even temporary employment (interim).",
+            "question4": "Can I apply for a position even if I don’t live in the country where it’s offered?",
+            "answer4": "Absolutely. Many of our positions are open to international candidates, and we often provide support with documentation and visas, as well as relocation assistance.",
+            "question5": "How will I know if my profile has been selected for a job offer?",
+            "answer5": "We will contact you directly via email or phone to inform you about the status of your application. You can also log in to your profile on our website to track the progress.",
+            "question6": "Which sectors do you mainly cover?",
+            "answer6": "We specialize in various sectors, including logistics, construction, agriculture, hospitality, and warehousing. We collaborate with companies across several European countries, offering dynamic job opportunities.",
+            "question7": "Do you provide interview preparation support?",
+            "answer7": "Yes, we offer pre-interview consultations to help you present yourself effectively. We will provide information about the company and the specific job requirements, along with tips on how to succeed in the interview.",
+            "question8": "What happens if I’m not satisfied with the assigned job position?",
+            "answer8": "We are here to support you. If the position isn’t the right fit, we encourage you to contact us immediately. We will do our best to find a solution that meets your needs and the client company’s requirements.",
+            "question9": "Do you assist with the necessary documentation for working abroad?",
+            "answer9": "Yes, we help candidates with all the necessary paperwork for relocation and working abroad, including visa processing, work permits, and tax documentation.",
+            "question10": "Are there opportunities for career growth?",
+            "answer10": "Yes, many of the companies we work with offer opportunities for advancement and growth within their organization. They often provide training and development courses to help improve your skills."
+        }
+
+    },
+    "it": {
+        "navbar": {
+            "opportunities": "Opportunità",
+            "application_form": "Modulo di Candidatura",
+            "send_mail": "Invia una mail",
+            "call_us": "Chiamaci",
+            "faq": "FAQ"
+        },
+        "hero": {
+            "title": "ConeVis",
+            "subtitle": "Connettere il talento con la forza oltre i confini",
+            "presentation": "Siamo un'azienda multiservizi leader nelle risorse umane, specializzata nel collocamento di personale qualificato in tutta Europa. Offriamo opportunità di carriera su misura, con un processo di assunzione rapido e mirato, per connettere i talenti giusti alle aziende in crescita.",
+            "bt_cta": "Scopri le opportunità"
+        },
+        "services": {
+            "title": "I nostri servizi",
+            "description": "Aiutiamo a connettere lavoratori qualificati con le principali aziende nei Paesi Bassi, in Italia e in Germania.",
+            "cards": {
+                "flower": {
+                    "title": "Raccolta di Fiori e Piante",
+                    "description": "Lavori in agricoltura, raccolta di fiori e gestione delle piante."
+                },
+                "warehouse": {
+                    "title": "Lavoratori di Magazzino",
+                    "description": "Lavori di logistica, confezionamento e magazzino disponibili."
+                },
+                "waitstaff": {
+                    "title": "Camerieri",
+                    "description": "Opportunità nell'ospitalità come camerieri in tutta Europa."
+                },
+                "construction": {
+                    "title": "Lavoratori Edili",
+                    "description": "Unisciti a team di costruzione in vari progetti internazionali."
+                }
+            }
+        },
+        "contact": {
+            "title": "Contatti",
+            "description": "Informazioni di contatto..."
+        },
+        "application": {
+            "title": "Forum per candidarti",
+            "description": "Forum per candidature..."
+        },
+        "faq": {
+            "title": "FAQ",
+            "description": "Domande frequenti..."
+        },
+        "faqpage": {
+            "title": "Frequently Asked Questions",
+            "question1": "How does the recruitment process work?",
+            "answer1": "Our recruitment process begins when you submit your application through our website. We will evaluate your profile and contact you if your background matches the open positions. This may be followed by a phone or video interview before being presented directly to the client company.",
+            "question2": "Do I have to pay to use the agency's services?",
+            "answer2": "No, our intermediary services for candidates are completely free. Our fees are paid by the companies seeking qualified personnel.",
+            "question3": "What types of contracts do you offer?",
+            "answer3": "We offer a variety of contract types depending on the position and the client company. This can include fixed-term contracts, permanent contracts, or even temporary employment (interim).",
+            "question4": "Can I apply for a position even if I don’t live in the country where it’s offered?",
+            "answer4": "Absolutely. Many of our positions are open to international candidates, and we often provide support with documentation and visas, as well as relocation assistance.",
+            "question5": "How will I know if my profile has been selected for a job offer?",
+            "answer5": "We will contact you directly via email or phone to inform you about the status of your application. You can also log in to your profile on our website to track the progress.",
+            "question6": "Which sectors do you mainly cover?",
+            "answer6": "We specialize in various sectors, including logistics, construction, agriculture, hospitality, and warehousing. We collaborate with companies across several European countries, offering dynamic job opportunities.",
+            "question7": "Do you provide interview preparation support?",
+            "answer7": "Yes, we offer pre-interview consultations to help you present yourself effectively. We will provide information about the company and the specific job requirements, along with tips on how to succeed in the interview.",
+            "question8": "What happens if I’m not satisfied with the assigned job position?",
+            "answer8": "We are here to support you. If the position isn’t the right fit, we encourage you to contact us immediately. We will do our best to find a solution that meets your needs and the client company’s requirements.",
+            "question9": "Do you assist with the necessary documentation for working abroad?",
+            "answer9": "Yes, we help candidates with all the necessary paperwork for relocation and working abroad, including visa processing, work permits, and tax documentation.",
+            "question10": "Are there opportunities for career growth?",
+            "answer10": "Yes, many of the companies we work with offer opportunities for advancement and growth within their organization. They often provide training and development courses to help improve your skills."
+        }
+    },
+    "rom": {
+        "navbar": {
+            "opportunities": "Oportunități",
+            "application_form": "Formular de Aplicare",
+            "send_mail": "Trimite un email",
+            "call_us": "Sunați-ne",
+            "faq": "Întrebări frecvente"
+        },
+        "hero": {
+            "title": "ConeVis",
+            "subtitle": "Conectarea talentului cu forța dincolo de granițe",
+            "presentation": "Suntem o companie de servicii multiple, lider în resurse umane, specializată în plasarea personalului calificat în întreaga Europă. Oferim oportunități de carieră personalizate, cu un proces rapid și eficient de angajare pentru a conecta talentele potrivite cu afacerile în expansiune.",
+            "cta_button": "Descoperiți Oportunitățile"
+        },
+        "services": {
+            "title": "Serviciile Noastre",
+            "description": "Ajutăm la conectarea lucrătorilor calificați cu companii de frunte din Olanda, Italia și Germania.",
+            "cards": {
+                "flower": {
+                    "title": "Colectarea Florilor și Plantelor",
+                    "description": "Locuri de muncă în agricultură, recoltarea florilor și gestionarea plantelor."
+                },
+                "warehouse": {
+                    "title": "Lucrători de Depozit",
+                    "description": "Locuri de muncă disponibile în logistică, ambalare și depozit."
+                },
+                "waitstaff": {
+                    "title": "Personal de Servire",
+                    "description": "Oportunități în ospitalitate ca personal de servire în toată Europa."
+                },
+                "construction": {
+                    "title": "Lucrători în Construcții",
+                    "description": "Alăturați-vă echipelor de construcție în diverse proiecte internaționale."
+                }
+            }
+        },
+        "contact": {
+            "title": "Contacte",
+            "description": "Informații de contact..."
+        },
+        "application": {
+            "title": "Formular de Aplicare",
+            "description": "Formular pentru aplicații..."
+        },
+        "faq": {
+            "title": "Întrebări Frecvente",
+            "description": "Întrebări frecvente..."
+        },
+        "faqpage": {
+            "title": "Frequently Asked Questions",
+            "question1": "How does the recruitment process work?",
+            "answer1": "Our recruitment process begins when you submit your application through our website. We will evaluate your profile and contact you if your background matches the open positions. This may be followed by a phone or video interview before being presented directly to the client company.",
+            "question2": "Do I have to pay to use the agency's services?",
+            "answer2": "No, our intermediary services for candidates are completely free. Our fees are paid by the companies seeking qualified personnel.",
+            "question3": "What types of contracts do you offer?",
+            "answer3": "We offer a variety of contract types depending on the position and the client company. This can include fixed-term contracts, permanent contracts, or even temporary employment (interim).",
+            "question4": "Can I apply for a position even if I don’t live in the country where it’s offered?",
+            "answer4": "Absolutely. Many of our positions are open to international candidates, and we often provide support with documentation and visas, as well as relocation assistance.",
+            "question5": "How will I know if my profile has been selected for a job offer?",
+            "answer5": "We will contact you directly via email or phone to inform you about the status of your application. You can also log in to your profile on our website to track the progress.",
+            "question6": "Which sectors do you mainly cover?",
+            "answer6": "We specialize in various sectors, including logistics, construction, agriculture, hospitality, and warehousing. We collaborate with companies across several European countries, offering dynamic job opportunities.",
+            "question7": "Do you provide interview preparation support?",
+            "answer7": "Yes, we offer pre-interview consultations to help you present yourself effectively. We will provide information about the company and the specific job requirements, along with tips on how to succeed in the interview.",
+            "question8": "What happens if I’m not satisfied with the assigned job position?",
+            "answer8": "We are here to support you. If the position isn’t the right fit, we encourage you to contact us immediately. We will do our best to find a solution that meets your needs and the client company’s requirements.",
+            "question9": "Do you assist with the necessary documentation for working abroad?",
+            "answer9": "Yes, we help candidates with all the necessary paperwork for relocation and working abroad, including visa processing, work permits, and tax documentation.",
+            "question10": "Are there opportunities for career growth?",
+            "answer10": "Yes, many of the companies we work with offer opportunities for advancement and growth within their organization. They often provide training and development courses to help improve your skills."
+        }
+    }
+}

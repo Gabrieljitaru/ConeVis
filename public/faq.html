@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ConeVis | FAQ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .faqpage-section {
+            margin-top: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div include-html="navbarFaq.html"></div>
+
+    <!-- Sezione delle FAQ -->
+    <div include-html="faqQuestions.html"></div>
+
+    <!-- Load scripts at the end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/translations.js"></script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Funzione per caricare i componenti HTML da file esterni
+        function loadIncludes() {
+            const promises = [];
+            $("[include-html]").each(function () {
+                const element = $(this);
+                const file = element.attr("include-html");
+                if (file) {
+                    const promise = new Promise((resolve, reject) => {
+                        element.load(file, function (response, status, xhr) {
+                            if (status === "error") {
+                                element.html("Error loading file: " + xhr.status + " " + xhr.statusText);
+                                reject(new Error("Error loading file: " + xhr.status + " " + xhr.statusText));
+                            } else {
+                                resolve();
+                            }
+                        });
+                    });
+                    promises.push(promise);
+                }
+            });
+            return Promise.all(promises);
+        }
+
+        // Controlla se c'è una lingua salvata in localStorage e imposta la lingua predefinita
+        let lang = localStorage.getItem('lang') || 'en';
+
+        // Carica e applica le traduzioni dal database Firebase
+        function loadTranslations() {
+            const databaseURL = 'https://conevishs-default-rtdb.firebaseio.com/translations/' + lang + '.json'; // URL per la lingua
+
+            fetch(databaseURL)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(translations => {
+                    // Specifico per la FAQ Page
+                    document.getElementById('faqpage-title').textContent = translations.faqpage.title;
+                document.getElementById('faqpage-question1').textContent = translations.faqpage.question1;
+                document.getElementById('faqpage-answer1').textContent = translations.faqpage.answer1;
+                document.getElementById('faqpage-question2').textContent = translations.faqpage.question2;
+                document.getElementById('faqpage-answer2').textContent = translations.faqpage.answer2;
+                document.getElementById('faqpage-question3').textContent = translations.faqpage.question3;
+                document.getElementById('faqpage-answer3').textContent = translations.faqpage.answer3;
+                document.getElementById('faqpage-question4').textContent = translations.faqpage.question4;
+                document.getElementById('faqpage-answer4').textContent = translations.faqpage.answer4;
+                document.getElementById('faqpage-question5').textContent = translations.faqpage.question5;
+                document.getElementById('faqpage-answer5').textContent = translations.faqpage.answer5;
+                document.getElementById('faqpage-question6').textContent = translations.faqpage.question6;
+                document.getElementById('faqpage-answer6').textContent = translations.faqpage.answer6;
+                document.getElementById('faqpage-question7').textContent = translations.faqpage.question7;
+                document.getElementById('faqpage-answer7').textContent = translations.faqpage.answer7;
+                document.getElementById('faqpage-question8').textContent = translations.faqpage.question8;
+                document.getElementById('faqpage-answer8').textContent = translations.faqpage.answer8;
+                document.getElementById('faqpage-question9').textContent = translations.faqpage.question9;
+                document.getElementById('faqpage-answer9').textContent = translations.faqpage.answer9;
+                document.getElementById('faqpage-question10').textContent = translations.faqpage.question10;
+                document.getElementById('faqpage-answer10').textContent = translations.faqpage.answer10;
+                    // Add additional questions and answers as needed
+                })
+                .catch(error => console.error('Error loading translations:', error));
+        }
+
+        // Carica i componenti HTML, quindi carica le traduzioni
+        loadIncludes().then(() => {
+            loadTranslations();
+        });
+    });
+    </script>
+
+</body>
+
+</html>

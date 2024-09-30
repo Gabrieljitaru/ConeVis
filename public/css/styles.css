@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stili per la barra di navigazione */
+.navbar {
+    background: rgba(143, 88, 246, 0.8); /* Sfondo scuro traslucido */
+    position: fixed; /* Fissa la barra di navigazione in alto */
+    width: 100%; /* Larghezza completa */
+    top: 0; /* Posiziona in alto */
+    z-index: 1000; /* Porta la barra sopra gli altri contenuti */
+}
+
+.navbar ul {
+    list-style: none; /* Rimuove i punti elenco */
+    display: flex; /* Usa Flexbox per allineare gli elementi */
+    justify-content: center; /* Centra gli elementi */
+    padding: 1rem; /* Padding interno */
+}
+
+.navbar li {
+    margin: 0 20px; /* Spaziatura tra i pulsanti */
+}
+
+.navbar a {
+    color: white; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-family: 'Lexend', sans-serif; /* Usa il font Lexend */
+    font-weight: 600; /* Peso del carattere */
+    transition: color 0.3s; /* Transizione per il colore */
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Colore dorato al passaggio del mouse */
+}
+
+/* Stile per il selettore della lingua */
+#language-toggle {
+    cursor: pointer;
+    position: relative;
+    color: white; /* Coerente con il colore degli altri link */
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+}
+
+#language-select {
+    margin-left: 10px; /* Spazio tra il link e il selettore */
+    background-color: rgba(143, 88, 246, 0.8); /* Sfondo scuro per il selettore */
+    color: white; /* Testo bianco */
+    border: none; /* Rimuove il bordo di default */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 5px; /* Padding interno */
+    font-family: 'Lexend', sans-serif; /* Font coerente */
+    font-weight: 600; /* Peso del carattere */
+    transition: background-color 0.3s; /* Transizione per lo sfondo */
+}
+
+#language-select:hover {
+    background-color: #FFD700; /* Sfondo dorato al passaggio del mouse */
+    color: black; /* Testo nero in hover */
+}
+
+
+#language-select option.active {
+    background-color: #007bff; /* Colore di sfondo per l'opzione attiva */
+    color: white; /* Colore del testo per l'opzione attiva */
+}
+
+
+/* Stili generali */
+body {
+    font-family: 'Lexend', sans-serif; /* Usa Lexend per il corpo */
+    line-height: 1.6;
+}
+
+.hero {
+    margin-top: 0px; /* Spazio per la barra di navigazione fissa */
+    height: calc(105vh - 30px); /* Riduci l'altezza della sezione hero */
+    background: url('../images/hero-image.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: #ffffff; /* Colore per il sottotitolo */
+    font-size: 100px; /* Dimensione del carattere per il sottotitolo */
+    font-weight: bold; /* Grassetto per il sottotitolo */
+    margin-top: 10px; /* Margine sotto il sottotitolo */
+    width: 80%; /* Assicura che il contenitore del testo non occupi tutta la larghezza della pagina */
+    max-width: 1200px; /* Imposta una larghezza massima */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
+}
+
+/* Stile per la nuova sezione Presentation */
+.presentation-section {
+    background-color: #f0f0f0; /* Colore di sfondo per la sezione */
+    padding: 40px 20px; /* Spaziatura interna per creare un'area più ampia */
+    text-align: center; /* Allineamento del testo al centro */
+}
+
+.presentation-content {
+    max-width: 1000px; /* Larghezza massima del contenitore */
+    margin: 0 auto; /* Centra il contenuto orizzontalmente */
+}
+
+.hero-presentation {
+    color: #000000; /* Colore del testo per la presentazione */
+    font-size: 22px; /* Dimensione del font */
+    line-height: 1.6; /* Altezza della linea per migliorare la leggibilità */
+}
+
+
+.hero-content #hero-logo {
+    width: 290px; /* Aumenta la larghezza del logo */
+    height: auto; /* Mantieni le proporzioni del logo */
+    margin-bottom: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Lexend', sans-serif; /* Usa Lexend per il titolo */
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 500; /* Peso del carattere */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombreggiatura */
+}
+
+.hero p {
+    font-family: 'Lexend', sans-serif; /* Usa Lexend per il paragrafo */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: #FFD700;
+    color: rgb(32, 31, 31);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+/* ////////////////////////////////////// 
+
+.services {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #ee0101;
+} */
+
+
+/* ///////////////////////////////////// opportunita */
+
+.jobs {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.jobs h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.job {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.job h2 {
+    margin-bottom: 1rem;
+}
+
+.job p {
+    margin-bottom: 1rem;
+}
+
+
+/* //////////////////////////////////////// faq  */
+
+.faq-section {
+    padding: 50px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.faq-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.faq h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 1.1rem;
+}
+
+/* //////////////////////////////////////////// Servizi */
+
+.services {
+    position: relative; /* Necessario per posizionare le frecce */
+    overflow: auto; /* Nascondi eventuale overflow orizzontale */
+    padding: 50px 0; /* Aggiungi padding verticale */
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    overflow-x: auto; /* Permette lo scorrimento orizzontale */
+    scroll-behavior: smooth; /* Scorrimento fluido */
+    gap: 20px;
+    padding: 20px; /* Aggiunge padding per i margini */
+}
+
+.card {
+    min-width: 250px;
+    max-width: 300px;
+    flex: 0 0 auto; /* Evita che le card si restringano */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Stile per le frecce */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+
+/* ///////////////////////////////////////////// Contact form */
+
+#contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Limita la larghezza del modulo */
+    margin: 0 auto; /* Centra il modulo */
+    text-align: center; /* Centra il testo */
+}
+
+#contact-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contact-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    margin: 0 auto;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center; /* Centra gli elementi del modulo */
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 8px; /* Ridotto il padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200%; /* Ridotto la larghezza dei campi */
+}
+
+#contact-form textarea {
+    width: 200%; /* Assicura che il textarea sia accorciato */
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #FFD700;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70%; /* Rende il pulsante largo come il modulo */
+}
+
+#contact-form button:hover {
+    background-color: #e7c403;
+}
+
