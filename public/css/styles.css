@@ -325,18 +325,21 @@ body {
 
 
 /* ///////////////////////////////////////////// Contact form */
-
-/* Container che contiene i due moduli affiancati */
+/* Container principale con Flexbox */
 #contact-section {
-    display: flex;
-    justify-content: space-between; /* Spazio tra i due moduli */
-    gap: 20px; /* Spazio tra i moduli */
     padding: 20px;
     background-color: #f9f9f9;
-    flex-wrap: nowrap; /* Impedisce che i moduli si sovrappongano verticalmente */
 }
 
-/* Stile per entrambi i moduli */
+.form-container {
+    display: flex; /* Flexbox per mettere i moduli uno accanto all'altro */
+    justify-content: space-between; /* Spazio tra i due moduli */
+    align-items: center; /* Allinea i moduli in alto */
+    gap: 20px; /* Spazio tra i moduli */
+    position: relative; /* Per posizionare il box "oppure" */
+}
+
+/* Moduli affiancati */
 .form-container section {
     background-color: #f9f9f9;
     padding: 20px;
@@ -344,6 +347,22 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 45%; /* Imposta larghezza per permettere che stiano affiancati */
     text-align: center;
+}
+
+/* Stile del box "oppure" */
+#or-box {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Posiziona centralmente */
+    transform: translate(-50%, -50%); /* Centra il box rispetto a se stesso */
+    background-color: #f9f9f9; /* Colore di sfondo */
+    color: black; /* Colore del testo */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1; /* Assicura che si sovrapponga agli altri elementi */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Titoli dei moduli */
@@ -392,7 +411,7 @@ body {
 }
 
 #contact-form button:hover {
-    background-color: #e7c403;
+    background-color: #bba006;
 }
 
 /* Stile per le informazioni di contatto */

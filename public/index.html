@@ -74,23 +74,46 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 id="contact-title">Contattaci</h2>
-        <p id="contact-description">Compila il modulo sottostante per inviarci un messaggio.</p>
-        <form id="contact-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+   <!-- Contact Section -->
+<section id="contact-section">
+    <div class="form-container">
+        <!-- Modulo di Contatto -->
+        <section id="contact">
+            <h2 id="contact-title">Contattaci</h2>
+            <p id="contact-description">Compila il modulo sottostante per inviarci un messaggio.</p>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Messaggio:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <!-- Box con la scritta "oppure" -->
+        <div id="or-box">oppure</div>
 
-            <label for="message">Messaggio:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <!-- Modulo Informazioni di Contatto -->
+        <section id="contact-info">
+            <h2>Informazioni di Contatto</h2>
+            <div>
+                <h3>Email</h3>
+                <a href="mailto:example@example.com">example@example.com</a>
+            </div>
+            <div>
+                <h3>Chiamaci</h3>
+                <a href="tel:+1234567890">+123 456 7890</a>
+            </div>
+        </section>
+    </div>
+</section>
 
-            <button type="submit">Send</button>
-        </form>
-    </section>
+
 
 
     <!-- Application Section -->
