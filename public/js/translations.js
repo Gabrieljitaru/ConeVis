@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Services Section
                 document.getElementById('services-title').textContent = translations.services.title;
                 document.getElementById('services-description').textContent = translations.services.description;
-                document.getElementById('card-flower-title').textContent = translations.services.cards.flower.title;
-                document.getElementById('card-flower-description').textContent = translations.services.cards.flower.description;
-                document.getElementById('card-warehouse-title').textContent = translations.services.cards.warehouse.title;
-                document.getElementById('card-warehouse-description').textContent = translations.services.cards.warehouse.description;
-                document.getElementById('card-waitstaff-title').textContent = translations.services.cards.waitstaff.title;
-                document.getElementById('card-waitstaff-description').textContent = translations.services.cards.waitstaff.description;
-                document.getElementById('card-construction-title').textContent = translations.services.cards.construction.title;
-                document.getElementById('card-construction-description').textContent = translations.services.cards.construction.description;
+                // document.getElementById('card-flower-title').textContent = translations.services.cards.flower.title;
+                // document.getElementById('card-flower-description').textContent = translations.services.cards.flower.description;
+                // document.getElementById('card-warehouse-title').textContent = translations.services.cards.warehouse.title;
+                // document.getElementById('card-warehouse-description').textContent = translations.services.cards.warehouse.description;
+                // document.getElementById('card-waitstaff-title').textContent = translations.services.cards.waitstaff.title;
+                // document.getElementById('card-waitstaff-description').textContent = translations.services.cards.waitstaff.description;
+                // document.getElementById('card-construction-title').textContent = translations.services.cards.construction.title;
+                // document.getElementById('card-construction-description').textContent = translations.services.cards.construction.description;
 
                 // Contact Section
                 // document.getElementById('contact-title').textContent = translations.contact.title;
