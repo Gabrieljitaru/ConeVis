@@ -36,8 +36,8 @@ const translations = {
             "bt_cta": "Discover Opportunities"
         },
         "services": {
-            "title": "Our Services",
-            "description": "We help connect skilled workers with leading companies in the Netherlands, Italy, and Germany.",
+            "title": "See, Click and Apply Now!",
+            "description": "we help you connect with qualified companies across Europe",
             "cards": {
                 "flower": {
                     "title": "Flower & Plant Collection",
