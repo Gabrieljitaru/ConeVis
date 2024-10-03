@@ -44,24 +44,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Hero Section
                 document.getElementById('hero-subtitle').textContent = translations.hero.subtitle;
-                document.getElementById('hero-cta').textContent = translations.hero.bt_cta;
+                document.getElementById('hero-bt_cta').textContent = translations.hero.bt_cta;
                 document.getElementById('hero-presentation').textContent = translations.hero.presentation;
 
                 // Services Section
                 document.getElementById('services-title').textContent = translations.services.title;
                 document.getElementById('services-description').textContent = translations.services.description;
-                // document.getElementById('card-flower-title').textContent = translations.services.cards.flower.title;
-                // document.getElementById('card-flower-description').textContent = translations.services.cards.flower.description;
-                // document.getElementById('card-warehouse-title').textContent = translations.services.cards.warehouse.title;
-                // document.getElementById('card-warehouse-description').textContent = translations.services.cards.warehouse.description;
-                // document.getElementById('card-waitstaff-title').textContent = translations.services.cards.waitstaff.title;
-                // document.getElementById('card-waitstaff-description').textContent = translations.services.cards.waitstaff.description;
-                // document.getElementById('card-construction-title').textContent = translations.services.cards.construction.title;
-                // document.getElementById('card-construction-description').textContent = translations.services.cards.construction.description;
 
-                // Contact Section
-                // document.getElementById('contact-title').textContent = translations.contact.title;
-                // document.getElementById('contact-description').textContent = translations.contact.description;
+                document.getElementById('services-cards-one-country').textContent = translations.services.cards.one.country;
+                document.getElementById('services-cards-one-title').textContent = translations.services.cards.one.title;
+                document.getElementById('services-cards-one-description').textContent = translations.services.cards.one.description;
+                document.getElementById('services-viewmore1').textContent = translations.services.viewmore;
+
+                document.getElementById('services-cards-two-country').textContent = translations.services.cards.two.country;
+                document.getElementById('services-cards-two-title').textContent = translations.services.cards.two.title;
+                document.getElementById('services-cards-two-description').textContent = translations.services.cards.two.description;
+                document.getElementById('services-viewmore2').textContent = translations.services.viewmore;
+
+                document.getElementById('services-cards-three-country').textContent = translations.services.cards.three.country;
+                document.getElementById('services-cards-three-title').textContent = translations.services.cards.three.title;
+                document.getElementById('services-cards-three-description').textContent = translations.services.cards.three.description;
+                document.getElementById('services-viewmore3').textContent = translations.services.viewmore;
+
+                document.getElementById('services-cards-four-country').textContent = translations.services.cards.four.country;
+                document.getElementById('services-cards-four-title').textContent = translations.services.cards.four.title;
+                document.getElementById('services-cards-four-description').textContent = translations.services.cards.four.description;
+                document.getElementById('services-viewmore4').textContent = translations.services.viewmore;
+
+                document.getElementById('services-cards-five-country').textContent = translations.services.cards.five.country;
+                document.getElementById('services-cards-five-title').textContent = translations.services.cards.five.title;
+                document.getElementById('services-cards-five-description').textContent = translations.services.cards.five.description;
+                document.getElementById('services-viewmore5').textContent = translations.services.viewmore;
+
+                document.getElementById('services-cards-six-country').textContent = translations.services.cards.six.country;
+                document.getElementById('services-cards-six-title').textContent = translations.services.cards.six.title;
+                document.getElementById('services-cards-six-description').textContent = translations.services.cards.six.description;
+                document.getElementById('services-viewmore6').textContent = translations.services.viewmore;
+
+
 
                 // Application Section
                 document.getElementById('application-title').textContent = translations.application.title;
@@ -75,41 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('application-orcall').textContent = translations.application.orcall;
                 document.getElementById('application-ormail').textContent = translations.application.ormail;
 
-                // FAQ Section
-                document.getElementById('faqpage-title').textContent = translations.faqpage.title;
-                document.getElementById('faqpage-question1').textContent = translations.faqpage.question1;
-                document.getElementById('faqpage-answer1').textContent = translations.faqpage.answer1;
-                document.getElementById('faqpage-question2').textContent = translations.faqpage.question2;
-                document.getElementById('faqpage-answer2').textContent = translations.faqpage.answer2;
-                document.getElementById('faqpage-question3').textContent = translations.faqpage.question3;
-                document.getElementById('faqpage-answer3').textContent = translations.faqpage.answer3;
-                document.getElementById('faqpage-question4').textContent = translations.faqpage.question4;
-                document.getElementById('faqpage-answer4').textContent = translations.faqpage.answer4;
-                document.getElementById('faqpage-question5').textContent = translations.faqpage.question5;
-                document.getElementById('faqpage-answer5').textContent = translations.faqpage.answer5;
-                document.getElementById('faqpage-question6').textContent = translations.faqpage.question6;
-                document.getElementById('faqpage-answer6').textContent = translations.faqpage.answer6;
-                document.getElementById('faqpage-question7').textContent = translations.faqpage.question7;
-                document.getElementById('faqpage-answer7').textContent = translations.faqpage.answer7;
-                document.getElementById('faqpage-question8').textContent = translations.faqpage.question8;
-                document.getElementById('faqpage-answer8').textContent = translations.faqpage.answer8;
-                document.getElementById('faqpage-question9').textContent = translations.faqpage.question9;
-                document.getElementById('faqpage-answer9').textContent = translations.faqpage.answer9;
-                document.getElementById('faqpage-question10').textContent = translations.faqpage.question10;
-                document.getElementById('faqpage-answer10').textContent = translations.faqpage.answer10;
+            
 
-                //jobs
                 // Jobs Section
-                document.getElementById('jobs-title').textContent = translations.jobs.title;
-                document.getElementById('jobs-description').textContent = translations.jobs.description;
+                // document.getElementById('jobs-title').textContent = translations.jobs.title;
+                // document.getElementById('jobs-description').textContent = translations.jobs.description;
 
                 // Assuming there are multiple job listings
-                const jobCards = translations.jobs.cards;
-                jobCards.forEach((job, index) => {
-                    document.getElementById(`card-job-${index}-title`).textContent = job.title;
-                    document.getElementById(`card-job-${index}-description`).textContent = job.description;
-                });
-
+                // const jobCards = translations.jobs.cards;
+                // jobCards.forEach((job, index) => {
+                //     document.getElementById(`card-job-${index}-title`).textContent = job.title;
+                //     document.getElementById(`card-job-${index}-description`).textContent = job.description;
+                // });
 
                 setLanguageSelect(lang);
             });

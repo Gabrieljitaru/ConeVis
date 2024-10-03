@@ -38,23 +38,38 @@ const translations = {
         "services": {
             "title": "See, Click and Apply Now!",
             "description": "we help you connect with qualified companies across Europe",
+            "viewmore": "View more",
             "cards": {
-                "flower": {
-                    "title": "Flower & Plant Collection",
-                    "description": "Jobs in agriculture, flower harvesting, and plant management."
+                "one": {
+                    "country": "France",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
                 },
-                "warehouse": {
-                    "title": "Warehouse Workers",
-                    "description": "Logistics, packaging, and warehouse jobs available."
+                "two": {
+                    "country": "Germany",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
                 },
-                "waitstaff": {
-                    "title": "Waitstaff",
-                    "description": "Opportunities in hospitality as waitstaff across Europe."
+                "three": {
+                    "country": "Italy",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
                 },
-                "construction": {
-                    "title": "Construction Workers",
-                    "description": "Join construction teams in various international projects."
-                }
+                "four": {
+                    "country": "Romania",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
+                },
+                "five": {
+                    "country": "Holland",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
+                },
+                "six": {
+                    "country": "Tunisia",
+                    "title": "WAREHOUSEMAN",
+                    "description": "The warehouse worker is responsible for managing and controlling inventory, organizing the warehouse and preparing orders for shipment"
+                },
             }
         },
         "contact": {
@@ -69,9 +84,9 @@ const translations = {
             "message": "Message:",
             "submit": "Send",
             "or": "Or",
-            "ormail":"Send a mail",
+            "ormail": "Send a mail",
             "orcall": "Call Us",
-            "infocontact":"Choose another method:"
+            "infocontact": "Choose another method:"
         },
         "faq": {
             "title": "FAQ",
@@ -116,6 +131,11 @@ const translations = {
         }
 
     },
+
+
+
+
+
     "it": {
         "navbar": {
             "opportunities": "Opportunità",
@@ -125,130 +145,161 @@ const translations = {
             "faq": "FAQ"
         },
         "hero": {
-            "title": "ConeVis",
-            "subtitle": "Connettere il talento con la forza oltre i confini",
-            "presentation": "Siamo un'azienda multiservizi leader nelle risorse umane, specializzata nel collocamento di personale qualificato in tutta Europa. Offriamo opportunità di carriera su misura, con un processo di assunzione rapido e mirato, per connettere i talenti giusti alle aziende in crescita.",
-            "bt_cta": "Scopri le opportunità"
+            "subtitle": "Connettiamo il talento con la forza oltre i confini",
+            "presentation": "Siamo un'azienda leader multiservizio nel campo delle risorse umane, specializzata nel collocare personale qualificato in tutta Europa. Offriamo opportunità di carriera su misura con un processo di assunzione rapido e mirato per connettere i giusti talenti con le imprese in crescita.",
+            "bt_cta": "Scopri le Opportunità"
         },
         "services": {
-            "title": "I nostri servizi",
-            "description": "Aiutiamo a connettere lavoratori qualificati con le principali aziende nei Paesi Bassi, in Italia e in Germania.",
+            "title": "Guarda, Clicca e Candidati Ora!",
+            "description": "ti aiutiamo a connetterti con aziende qualificate in tutta Europa",
+            "viewmore": "Vedi di più",
             "cards": {
-                "flower": {
-                    "title": "Raccolta di Fiori e Piante",
-                    "description": "Lavori in agricoltura, raccolta di fiori e gestione delle piante."
+                "one": {
+                    "country": "Francia",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
                 },
-                "warehouse": {
-                    "title": "Lavoratori di Magazzino",
-                    "description": "Lavori di logistica, confezionamento e magazzino disponibili."
+                "two": {
+                    "country": "Germania",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
                 },
-                "waitstaff": {
-                    "title": "Camerieri",
-                    "description": "Opportunità nell'ospitalità come camerieri in tutta Europa."
+                "three": {
+                    "country": "Italia",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
                 },
-                "construction": {
-                    "title": "Lavoratori Edili",
-                    "description": "Unisciti a team di costruzione in vari progetti internazionali."
+                "four": {
+                    "country": "Romania",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
+                },
+                "five": {
+                    "country": "Olanda",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
+                },
+                "six": {
+                    "country": "Tunisia",
+                    "title": "MAGAZZINIERE",
+                    "description": "Il magazziniere è responsabile della gestione e del controllo dell'inventario, dell'organizzazione del magazzino e della preparazione degli ordini per la spedizione"
                 }
             }
         },
         "contact": {
             "title": "Contatti",
-            "description": "Informazioni di contatto..."
+            "description": "Informazioni di Contatto..."
         },
         "application": {
             "title": "Dicci cosa ti piace fare!",
-            "description": "Ti contatteremo con un'idea personalizzata.",
+            "description": "Ti contatteremo con un'idea su misura.",
             "name": "Nome:",
             "email": "Email:",
             "message": "Messaggio:",
             "submit": "Invia",
             "or": "Oppure",
-            "ormail":"Manda una mail",
+            "ormail": "Invia una mail",
             "orcall": "Chiamaci",
-            "infocontact":"Scegli un altro metodo:"
+            "infocontact": "Scegli un altro metodo:"
         },
         "faq": {
             "title": "FAQ",
-            "description": "Domande frequenti..."
+            "description": "Domande Frequenti..."
         },
         "faqpage": {
             "title": "Domande Frequenti",
             "question1": "Come funziona il processo di reclutamento?",
-            "answer1": "Il nostro processo di reclutamento inizia quando invii la tua candidatura attraverso il nostro sito web. Valuteremo il tuo profilo e ti contatteremo se il tuo background corrisponde alle posizioni aperte. Questo può essere seguito da un colloquio telefonico o video prima di essere presentato direttamente all'azienda cliente.",
+            "answer1": "Il nostro processo di reclutamento inizia quando invii la tua candidatura attraverso il nostro sito web. Valuteremo il tuo profilo e ti contatteremo se la tua esperienza corrisponde alle posizioni aperte. Questo può essere seguito da un'intervista telefonica o video prima di essere presentato direttamente all'azienda cliente.",
             "question2": "Devo pagare per utilizzare i servizi dell'agenzia?",
-            "answer2": "No, i nostri servizi di intermediazione per i candidati sono completamente gratuiti. Le nostre spese sono coperte dalle aziende che cercano personale qualificato.",
-            "question3": "Quali tipi di contratti offrite?",
-            "answer3": "Offriamo una varietà di tipi di contratto a seconda della posizione e dell'azienda cliente. Questo può includere contratti a tempo determinato, contratti permanenti o anche impiego temporaneo (interinale).",
+            "answer2": "No, i nostri servizi intermediari per i candidati sono completamente gratuiti. Le nostre commissioni sono pagate dalle aziende che cercano personale qualificato.",
+            "question3": "Che tipi di contratti offrite?",
+            "answer3": "Offriamo una varietà di tipi di contratto a seconda della posizione e dell'azienda cliente. Questo può includere contratti a tempo determinato, contratti a tempo indeterminato o persino lavoro temporaneo (interim).",
             "question4": "Posso candidarmi per una posizione anche se non vivo nel paese in cui è offerta?",
-            "answer4": "Assolutamente. Molte delle nostre posizioni sono aperte a candidati internazionali, e spesso forniamo supporto per la documentazione e i visti, oltre ad assistenza per il trasferimento.",
+            "answer4": "Assolutamente. Molte delle nostre posizioni sono aperte a candidati internazionali, e spesso forniamo supporto con documentazione e visti, oltre ad assistenza per il trasferimento.",
             "question5": "Come saprò se il mio profilo è stato selezionato per un'offerta di lavoro?",
-            "answer5": "Ti contatteremo direttamente via email o telefono per informarti sullo stato della tua candidatura. Puoi anche accedere al tuo profilo sul nostro sito web per monitorare il progresso.",
+            "answer5": "Ti contatteremo direttamente via email o telefono per informarti dello stato della tua candidatura. Puoi anche accedere al tuo profilo sul nostro sito web per monitorare i progressi.",
             "question6": "Quali settori coprite principalmente?",
-            "answer6": "Ci specializziamo in vari settori, tra cui logistica, costruzioni, agricoltura, ospitalità e magazzinaggio. Collaboriamo con aziende in diversi paesi europei, offrendo opportunità di lavoro dinamiche.",
-            "question7": "Fornite supporto per la preparazione ai colloqui?",
-            "answer7": "Sì, offriamo consulenze pre-colloquio per aiutarti a presentarti in modo efficace. Forniremo informazioni sull'azienda e sui requisiti specifici del lavoro, insieme a suggerimenti su come avere successo nel colloquio.",
-            "question8": "Cosa succede se non sono soddisfatto della posizione di lavoro assegnata?",
-            "answer8": "Siamo qui per supportarti. Se la posizione non è quella giusta, ti incoraggiamo a contattarci immediatamente. Faremo del nostro meglio per trovare una soluzione che soddisfi le tue esigenze e quelle dell'azienda cliente.",
-            "question9": "Assistete con la documentazione necessaria per lavorare all'estero?",
-            "answer9": "Sì, aiutiamo i candidati con tutta la documentazione necessaria per il trasferimento e il lavoro all'estero, inclusa la gestione dei visti, dei permessi di lavoro e della documentazione fiscale.",
+            "answer6": "Siamo specializzati in vari settori, tra cui logistica, costruzioni, agricoltura, ospitalità e magazzinaggio. Collaboriamo con aziende in diversi paesi europei, offrendo opportunità lavorative dinamiche.",
+            "question7": "Offrite supporto per la preparazione ai colloqui?",
+            "answer7": "Sì, offriamo consultazioni pre-colloquio per aiutarti a presentarti al meglio. Forniremo informazioni sull'azienda e sui requisiti specifici del lavoro, insieme a consigli su come avere successo nel colloquio.",
+            "question8": "Cosa succede se non sono soddisfatto della posizione assegnata?",
+            "answer8": "Siamo qui per supportarti. Se la posizione non è adatta, ti invitiamo a contattarci immediatamente. Faremo del nostro meglio per trovare una soluzione che soddisfi le tue esigenze e i requisiti dell'azienda cliente.",
+            "question9": "Offrite assistenza con la documentazione necessaria per lavorare all'estero?",
+            "answer9": "Sì, aiutiamo i candidati con tutta la documentazione necessaria per il trasferimento e per lavorare all'estero, compresi i visti, i permessi di lavoro e la documentazione fiscale.",
             "question10": "Ci sono opportunità di crescita professionale?",
-            "answer10": "Sì, molte delle aziende con cui lavoriamo offrono opportunità di avanzamento e crescita all'interno della loro organizzazione. Spesso forniscono corsi di formazione e sviluppo per aiutare a migliorare le tue competenze."
+            "answer10": "Sì, molte delle aziende con cui lavoriamo offrono opportunità di avanzamento e crescita all'interno della loro organizzazione. Spesso forniscono corsi di formazione e sviluppo per migliorare le tue competenze."
         },
         "jobs": {
             "manager": {
                 "title": "Posizione: Manager",
-                "location": "Sede: Roma",
-                "description": "Descrizione: Stiamo cercando un manager per la gestione del team...",
+                "location": "Luogo: Roma",
+                "description": "Descrizione: Stiamo cercando un manager per supervisionare il team...",
                 "apply": "Candidati Ora"
             },
             "web_developer": {
                 "title": "Posizione: Sviluppatore Web",
-                "location": "Sede: Milano",
-                "description": "Descrizione: Siamo alla ricerca di uno sviluppatore web esperto...",
+                "location": "Luogo: Milano",
+                "description": "Descrizione: Cerchiamo uno sviluppatore web esperto...",
                 "apply": "Candidati Ora"
             }
         }
     },
+
+
+
     "ro": {
         "navbar": {
             "opportunities": "Oportunități",
-            "application_form": "Formular de Aplicare",
-            "send_mail": "Trimite un mail",
+            "application_form": "Formular de aplicare",
+            "send_mail": "Trimite un e-mail",
             "call_us": "Sună-ne",
             "faq": "FAQ"
         },
         "hero": {
-            "title": "ConeVis",
-            "subtitle": "Conectând talentul cu forța dincolo de granițe",
-            "presentation": "Suntem o companie multi-servicii de top în resurse umane, specializată în plasarea personalului calificat în toată Europa. Oferim oportunități de carieră personalizate, cu un proces rapid și bine definit de angajare, pentru a conecta talentele potrivite cu afaceri în expansiune.",
+            "subtitle": "Conectăm talentul cu forța dincolo de granițe",
+            "presentation": "Suntem o companie de top multiservicii în domeniul resurselor umane, specializată în plasarea de personal calificat în toată Europa. Oferim oportunități de carieră personalizate, cu un proces de angajare rapid și țintit pentru a conecta talentele potrivite cu afacerile în creștere.",
             "bt_cta": "Descoperă Oportunitățile"
         },
         "services": {
-            "title": "Serviciile Noastre",
-            "description": "Ajutăm la conectarea lucrătorilor calificați cu companii de top din Olanda, Italia și Germania.",
+            "title": "Vezi, Clic și Aplică acum!",
+            "description": "Te ajutăm să te conectezi cu companii calificate din toată Europa",
+            "viewmore": "Vezi mai multe",
             "cards": {
-                "flower": {
-                    "title": "Colectarea Florilor și Plantelor",
-                    "description": "Locuri de muncă în agricultură, recoltarea florilor și gestionarea plantelor."
+                "one": {
+                    "country": "Franța",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
                 },
-                "warehouse": {
-                    "title": "Lucrători în Depozit",
-                    "description": "Locuri de muncă în logistică, ambalare și depozit."
+                "two": {
+                    "country": "Germania",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
                 },
-                "waitstaff": {
-                    "title": "Personal pentru Restaurant",
-                    "description": "Oportunități în ospitalitate ca personal pentru restaurant în întreaga Europă."
+                "three": {
+                    "country": "Italia",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
                 },
-                "construction": {
-                    "title": "Lucrători în Construcții",
-                    "description": "Alăturați-vă echipelor de construcție în diverse proiecte internaționale."
+                "four": {
+                    "country": "România",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
+                },
+                "five": {
+                    "country": "Olanda",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
+                },
+                "six": {
+                    "country": "Tunisia",
+                    "title": "DEPOZITAR",
+                    "description": "Muncitorul din depozit este responsabil de gestionarea și controlul inventarului, organizarea depozitului și pregătirea comenzilor pentru expediere"
                 }
             }
         },
         "contact": {
-            "title": "Contact",
-            "description": "Informații de contact..."
+            "title": "Contacte",
+            "description": "Informații de Contact..."
         },
         "application": {
             "title": "Spune-ne ce îți place să faci!",
@@ -258,54 +309,53 @@ const translations = {
             "message": "Mesaj:",
             "submit": "Trimite",
             "or": "Sau",
-            "ormail":"Trimite un mail",
+            "ormail": "Trimite un e-mail",
             "orcall": "Sună-ne",
-            "infocontact":"Alege o altă variantă:"
+            "infocontact": "Alege o altă metodă:"
         },
-
         "faq": {
             "title": "FAQ",
             "description": "Întrebări frecvente..."
         },
         "faqpage": {
-            "title": "Întrebări Frecvente",
+            "title": "Întrebări frecvente",
             "question1": "Cum funcționează procesul de recrutare?",
-            "answer1": "Procesul nostru de recrutare începe atunci când trimiți aplicația ta prin intermediul site-ului nostru. Vom evalua profilul tău și te vom contacta dacă experiența ta se potrivește cu posturile disponibile. Acest lucru poate fi urmat de un interviu telefonic sau video înainte de a fi prezentat direct clientului.",
-            "question2": "Trebuie să plătesc pentru a utiliza serviciile agenției?",
+            "answer1": "Procesul nostru de recrutare începe când îți trimiți aplicația prin intermediul site-ului nostru. Îți vom evalua profilul și te vom contacta dacă experiența ta corespunde pozițiilor deschise. Acest lucru poate fi urmat de un interviu telefonic sau video, înainte de a fi prezentat direct companiei client.",
+            "question2": "Trebuie să plătesc pentru a folosi serviciile agenției?",
             "answer2": "Nu, serviciile noastre de intermediere pentru candidați sunt complet gratuite. Taxele noastre sunt plătite de companiile care caută personal calificat.",
             "question3": "Ce tipuri de contracte oferiți?",
-            "answer3": "Oferim o varietate de tipuri de contracte, în funcție de post și de compania client. Acestea pot include contracte pe durată determinată, contracte permanente sau chiar muncă temporară.",
-            "question4": "Pot aplica pentru un post chiar dacă nu locuiesc în țara în care este oferit?",
-            "answer4": "Absolut. Multe dintre posturile noastre sunt deschise pentru candidați internaționali, și adesea oferim suport cu documentația și vizele, precum și asistență pentru relocare.",
+            "answer3": "Oferim o varietate de tipuri de contracte, în funcție de poziție și de compania client. Acestea pot include contracte pe termen determinat, contracte pe termen nedeterminat sau chiar muncă temporară (interimat).",
+            "question4": "Pot aplica pentru o poziție chiar dacă nu locuiesc în țara în care este oferită?",
+            "answer4": "Absolut. Multe dintre pozițiile noastre sunt deschise candidaților internaționali și adesea oferim suport cu documentația și vizele, precum și asistență pentru relocare.",
             "question5": "Cum voi ști dacă profilul meu a fost selectat pentru o ofertă de muncă?",
-            "answer5": "Te vom contacta direct prin email sau telefon pentru a te informa despre statutul aplicației tale. De asemenea, poți accesa profilul tău pe site-ul nostru pentru a urmări progresul.",
-            "question6": "Ce sectoare acoperiți în principal?",
-            "answer6": "Ne specializăm în diverse sectoare, inclusiv logistică, construcții, agricultură, ospitalitate și depozitare. Colaborăm cu companii din mai multe țări europene, oferind oportunități de muncă dinamice.",
-            "question7": "Oferiți suport pentru pregătirea interviurilor?",
-            "answer7": "Da, oferim consultanțe pre-interviu pentru a te ajuta să te prezinți eficient. Îți vom oferi informații despre companie și cerințele specifice ale locului de muncă, împreună cu sfaturi despre cum să ai succes în interviu.",
-            "question8": "Ce se întâmplă dacă nu sunt mulțumit de postul de muncă alocat?",
-            "answer8": "Suntem aici pentru a te sprijini. Dacă postul nu este potrivit, te încurajăm să ne contactezi imediat. Vom face tot posibilul să găsim o soluție care să satisfacă nevoile tale și cerințele companiei cliente.",
-            "question9": "Asistați cu documentele necesare pentru a lucra în străinătate?",
-            "answer9": "Da, ajutăm candidații cu toată documentația necesară pentru relocare și muncă în străinătate, inclusiv procesarea vizelor, permiselor de muncă și documentației fiscale.",
-            "question10": "Există oportunități de avansare în carieră?",
-            "answer10": "Da, multe dintre companiile cu care colaborăm oferă oportunități de avansare și dezvoltare în cadrul organizației lor. De obicei, oferă cursuri de formare și dezvoltare pentru a ajuta la îmbunătățirea abilităților tale."
+            "answer5": "Te vom contacta direct prin e-mail sau telefon pentru a te informa despre starea aplicației tale. De asemenea, poți accesa profilul tău pe site-ul nostru pentru a urmări progresul.",
+            "question6": "În ce sectoare activați în principal?",
+            "answer6": "Suntem specializați în diverse sectoare, inclusiv logistică, construcții, agricultură, ospitalitate și depozitare. Colaborăm cu companii din mai multe țări europene, oferind oportunități dinamice de muncă.",
+            "question7": "Oferiți suport pentru pregătirea interviului?",
+            "answer7": "Da, oferim consultanță înainte de interviu pentru a te ajuta să te prezinți eficient. Îți vom furniza informații despre companie și cerințele specifice ale locului de muncă, împreună cu sfaturi pentru a avea succes la interviu.",
+            "question8": "Ce se întâmplă dacă nu sunt mulțumit de poziția atribuită?",
+            "answer8": "Suntem aici pentru a te sprijini. Dacă poziția nu este potrivită, te încurajăm să ne contactezi imediat. Vom face tot posibilul pentru a găsi o soluție care să răspundă nevoilor tale și cerințelor companiei client.",
+            "question9": "Oferiți asistență cu documentația necesară pentru a lucra în străinătate?",
+            "answer9": "Da, ajutăm candidații cu toată documentația necesară pentru relocare și pentru a lucra în străinătate, inclusiv procesarea vizelor, permise de muncă și documentația fiscală.",
+            "question10": "Există oportunități de creștere profesională?",
+            "answer10": "Da, multe dintre companiile cu care lucrăm oferă oportunități de avansare și creștere în cadrul organizației lor. Adesea oferă cursuri de formare și dezvoltare pentru a îți îmbunătăți abilitățile."
         },
         "jobs": {
             "manager": {
                 "title": "Poziție: Manager",
                 "location": "Locație: Roma",
                 "description": "Descriere: Căutăm un manager pentru a supraveghea echipa...",
-                "apply": "Aplică Acum"
+                "apply": "Aplică acum"
             },
             "web_developer": {
                 "title": "Poziție: Dezvoltator Web",
                 "location": "Locație: Milano",
                 "description": "Descriere: Căutăm un dezvoltator web experimentat...",
-                "apply": "Aplică Acum"
+                "apply": "Aplică acum"
             }
         }
-
     }
+
 };
 
 

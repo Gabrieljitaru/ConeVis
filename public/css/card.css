@@ -1,3 +1,12 @@
+
+a {
+  text-decoration: none; /* Rimuove la sottolineatura tipica dei link */
+}
+
+.bottom .social-buttons-container .social-button .svg{
+  pointer-events: none; /* Rende non cliccabili i testi */
+}
+
 .predisposition {
   display: flex;
   justify-content: center; /* Per centrare orizzontalmente */
@@ -7,7 +16,6 @@
   margin: 20px; /* Spazio esterno attorno alla sezione */
   box-sizing: border-box; /* Include padding e border nelle dimensioni totali */
 }
-
 
 .parent-container {
   display: grid;
@@ -23,12 +31,14 @@
   width: 700px;
   height: 270px;
   perspective: 1000px;
+  position: relative; /* Assicura che gli elementi interni siano posizionati rispetto alla carta */
 }
 
 .card {
+  cursor: pointer; /* Mostra che la carta è cliccabile */
   height: 100%;
   border-radius: 50px;
-  background: linear-gradient(135deg, rgb(83, 11, 216) 0%, rgb(143, 88, 246, 1) 100%);
+  background: linear-gradient(135deg, #012950 0%, #0074D9 100%);
   transition: all 0.5s ease-in-out;
   transform-style: preserve-3d;
   box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
@@ -112,14 +122,14 @@
   .bottom .view-more .view-more-button {
     background: none;
     border: none;
-    color: rgb(57, 4, 136);
+    color: #012950;
     font-weight: bolder;
     font-size: 12px;
   }
   
   .bottom .view-more .svg {
     fill: none;
-    stroke: rgb(57, 4, 136);
+    stroke: #012950;
     stroke-width: 3px;
     max-height: 15px;
   }
@@ -128,6 +138,7 @@
     display: flex;
     gap: 10px;
     transform-style: preserve-3d;
+    margin-bottom: -10px;
   }
   
   .bottom .social-buttons-container .social-button {
@@ -156,7 +167,7 @@
   
   .bottom .social-buttons-container .social-button .svg {
     width: 15px;
-    fill: rgb(143, 88, 246, 1);
+    fill: #074983;
   }
   
   .bottom .social-buttons-container .social-button:hover {
@@ -164,7 +175,7 @@
   }
   
   .bottom .social-buttons-container .social-button:hover .svg {
-    fill: rgb(85, 48, 188);
+    fill: #0074D9;
   }
   
   .bottom .social-buttons-container .social-button:active {
@@ -230,7 +241,7 @@
     top: 1px;
     right: 118px;
     transition-delay: 1.2s;
-    background-color: rgba(255, 242, 0, 0.739); /* Sostituisci con il colore e la trasparenza desiderati */
+    background-color: rgb(255, 242, 0); /* Sostituisci con il colore e la trasparenza desiderati */
 
   }
   
