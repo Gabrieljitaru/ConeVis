@@ -1,8 +1,11 @@
 .predisposition {
   display: flex;
   justify-content: center; /* Per centrare orizzontalmente */
-  gap: 20px; /* Spazio tra i componenti */
+  gap: 18px; /* Spazio tra i componenti */
   align-items: center; /* Centrare verticalmente */
+  padding: 20px; /* Spazio interno attorno ai componenti */
+  margin: 20px; /* Spazio esterno attorno alla sezione */
+  box-sizing: border-box; /* Include padding e border nelle dimensioni totali */
 }
 
 
@@ -17,15 +20,15 @@
 }
 
 .parent {
-  width: 290px;
-  height: 300px;
+  width: 700px;
+  height: 270px;
   perspective: 1000px;
 }
 
 .card {
   height: 100%;
   border-radius: 50px;
-  background: linear-gradient(135deg, rgb(143, 88, 246, 1) 0%, rgb(143, 88, 246, 1) 100%);
+  background: linear-gradient(135deg, rgb(83, 11, 216) 0%, rgb(143, 88, 246, 1) 100%);
   transition: all 0.5s ease-in-out;
   transform-style: preserve-3d;
   box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
@@ -36,8 +39,8 @@
     position: absolute;
     inset: 8px;
     border-radius: 55px;
-    border-top-right-radius: 100%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+    border-top-right-radius: 900%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.362) 0%, rgba(255, 255, 255, 0.175) 100%);
     /* -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px); */
     transform: translate3d(0px, 0px, 25px);
@@ -47,24 +50,40 @@
   }
   
   .content {
-    padding: 100px 60px 0px 30px;
+    padding: 50px 20px 0px 20px; /* Ridotto il padding per adattarsi alla nuova dimensione */
     transform: translate3d(0, 0, 26px);
+    position: relative;
   }
   
   .content .title {
-    display: block;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 20px;
+    position: absolute; /* Cambia il comportamento di posizionamento dell'elemento */
+    top: 60px; /* Sposta l'elemento più in alto */
+    left: 10px; /* Sposta l'elemento verso sinistra */
+    color: rgba(255, 255, 255, 0.765);
+    font-size: 18px;
+    text-align: left; /* Allinea il testo a sinistra */
   }
   
   .content .text {
     display: block;
     color: rgba(255, 255, 255, 0.765);
     font-size: 15px;
-    margin-top: 20px;
-  }
-  
+    margin-top: 50px;
+    width: 100%; /* Imposta la larghezza del contenuto a 100% dell'elemento contenitore */
+    max-width: 400px; /* Definisci una larghezza massima per evitare che diventi troppo largo */
+    box-sizing: border-box; /* Assicura che il padding sia incluso nella larghezza totale */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+  .content .country {
+    position: absolute; /* Cambia il comportamento di posizionamento dell'elemento */
+    top: 10px; /* Sposta l'elemento più in alto */
+    left: 10px; /* Sposta l'elemento verso sinistra */
+    color: rgba(255, 255, 255, 0.765);
+    font-size: 18px;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
   .bottom {
     padding: 10px 12px;
     transform-style: preserve-3d;
@@ -93,14 +112,14 @@
   .bottom .view-more .view-more-button {
     background: none;
     border: none;
-    color: rgb(143, 88, 246, 1);
+    color: rgb(57, 4, 136);
     font-weight: bolder;
     font-size: 12px;
   }
   
   .bottom .view-more .svg {
     fill: none;
-    stroke: rgb(143, 88, 246, 1);
+    stroke: rgb(57, 4, 136);
     stroke-width: 3px;
     max-height: 15px;
   }
@@ -141,11 +160,11 @@
   }
   
   .bottom .social-buttons-container .social-button:hover {
-    background: black;
+    background: rgb(255, 234, 0);
   }
   
   .bottom .social-buttons-container .social-button:hover .svg {
-    fill: white;
+    fill: rgb(85, 48, 188);
   }
   
   .bottom .social-buttons-container .social-button:active {
@@ -206,32 +225,45 @@
   }
   
   .logo .circle4 {
-    width: 80px;
+    width: 60px;
     transform: translate3d(0, 0, 80px);
-    top: 23px;
-    right: 23px;
+    top: 1px;
+    right: 118px;
     transition-delay: 1.2s;
-    background-color: rgba(255, 242, 0, 0.571); /* Sostituisci con il colore e la trasparenza desiderati */
+    background-color: rgba(255, 242, 0, 0.739); /* Sostituisci con il colore e la trasparenza desiderati */
 
   }
   
+  .logo .circle4 .svg {
+    width: 50%; /* Imposta una larghezza per il logo */
+    height: auto; /* Mantiene il rapporto d'aspetto */
+    position: absolute; /* Posizionamento assoluto per centrare l'elemento */
+    top: 50%; /* Posiziona il logo verticalmente al centro */
+    left: 50%; /* Posiziona il logo orizzontalmente al centro */
+    transform: translate(-50%, -50%); /* Centra l'elemento in base al suo punto centrale */
+  }
+
   .logo .circle5 {
-    width: 50px;
+    width: 130px; /* Mantieni la larghezza desiderata */
+    height: 130px; /* Aggiungi altezza per mantenere la forma circolare */
     transform: translate3d(0, 0, 100px);
-    top: 30px;
-    right: 30px;
+    top: 0px; /* Posizionamento verticale */
+    right: 8px; /* Posizionamento orizzontale */
     display: grid;
-    place-content: center;
+    place-content: center; /* Centro il contenuto */
     transition-delay: 1.6s;
-    background-color: rgba(255, 242, 0, 0.571); /* Sostituisci con il colore e la trasparenza desiderati */
+  
+    /* Rimuovi il colore di sfondo e aggiungi i seguenti stili */
+    border-radius: 50%; /* Rendi il div circolare */
+    overflow: hidden; /* Nasconde tutto il contenuto che esce dai bordi */
   }
   
-  
-
-  .logo .circle5 .svg {
-    width: 20px;
-    fill: rgb(182, 16, 16);
+  .logo .circle5 .img {
+    width: 100%; /* Assicurati che l'immagine occupi tutto lo spazio disponibile */
+    height: 100%; /* Mantieni l'altezza al 100% per evitare distorsioni */
+    object-fit: cover; /* Assicura che l'immagine mantenga il suo rapporto d'aspetto mentre riempie il cerchio */
   }
+  
   
   .parent:hover .card {
     transform: rotate3d(1, 1, 0, 30deg);
