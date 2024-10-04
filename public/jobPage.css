@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.job-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-image img {
+    width: 100%;
+    height: auto;
+}
+
+.job-details {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #e9eef3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.job-info p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.about-company, .job-description, .job-requirements {
+    margin-bottom: 20px;
+}
+
+.about-company h2, .job-description h2, .job-requirements h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.job-requirements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.job-requirements ul li {
+    margin-bottom: 5px;
+}
+
+.call-to-action {
+    text-align: center;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.apply-btn, .contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-btn {
+    background-color: #7fc97f;
+    color: white;
+}
+
+.contact-btn {
+    background-color: #4a90e2;
+    color: white;
+}

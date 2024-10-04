@@ -17,6 +17,7 @@ a {
   box-sizing: border-box; /* Include padding e border nelle dimensioni totali */
 }
 
+
 .parent-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonne */
