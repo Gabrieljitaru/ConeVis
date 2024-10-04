@@ -38,7 +38,7 @@ a {
   cursor: pointer; /* Mostra che la carta è cliccabile */
   height: 100%;
   border-radius: 50px;
-  background: linear-gradient(135deg, #012950 0%, #0074D9 100%);
+  background: linear-gradient(135deg, #1888ce 0%, #1888ce 100%);
   transition: all 0.5s ease-in-out;
   transform-style: preserve-3d;
   box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
@@ -69,14 +69,14 @@ a {
     position: absolute; /* Cambia il comportamento di posizionamento dell'elemento */
     top: 60px; /* Sposta l'elemento più in alto */
     left: 10px; /* Sposta l'elemento verso sinistra */
-    color: rgba(255, 255, 255, 0.765);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     text-align: left; /* Allinea il testo a sinistra */
   }
   
   .content .text {
     display: block;
-    color: rgba(255, 255, 255, 0.765);
+    color: rgb(255, 255, 255);
     font-size: 15px;
     margin-top: 50px;
     width: 100%; /* Imposta la larghezza del contenuto a 100% dell'elemento contenitore */
@@ -89,7 +89,7 @@ a {
     position: absolute; /* Cambia il comportamento di posizionamento dell'elemento */
     top: 10px; /* Sposta l'elemento più in alto */
     left: 10px; /* Sposta l'elemento verso sinistra */
-    color: rgba(255, 255, 255, 0.765);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     text-align: left; /* Allinea il testo a sinistra */
 }

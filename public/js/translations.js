@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();
             })
-            .then(translations => {
+            .then(translations => { 
                 // Navbar
                 document.getElementById('nav-opportunities').textContent = translations.navbar.opportunities;
                 document.getElementById('nav-application').textContent = translations.navbar.application_form;
@@ -95,7 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('application-orcall').textContent = translations.application.orcall;
                 document.getElementById('application-ormail').textContent = translations.application.ormail;
 
-            
+                document.getElementById('footer-contact-title').textContent = translations.footer.contact.title;
+                document.getElementById('footer-link-title').textContent = translations.footer.link.title;
+                document.getElementById('footer-link-oppo').textContent = translations.footer.link.oppo;
+                document.getElementById('footer-link-home').textContent = translations.footer.link.home;
+                document.getElementById('footer-link-faq').textContent = translations.footer.link.faq;
+                document.getElementById('footer-link-cont').textContent = translations.footer.link.cont;
+                document.getElementById('footer-follow-title').textContent = translations.footer.follow.title;
+                document.getElementById('footer-follow-soca').textContent = translations.footer.follow.soca;
+                document.getElementById('footer-follow-socb').textContent = translations.footer.follow.socb;
+                document.getElementById('footer-follow-socc').textContent = translations.footer.follow.socc;
+
+
 
                 // Jobs Section
                 // document.getElementById('jobs-title').textContent = translations.jobs.title;

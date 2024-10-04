@@ -52,10 +52,12 @@
                 return Promise.all(promises);
             }
 
-            // Funzione per caricare le traduzioni
+            // Controlla se c'è una lingua salvata in localStorage e imposta la lingua predefinita
+            let lang = localStorage.getItem('lang') || 'en';
+
+            // Carica e applica le traduzioni dal database Firebase
             function loadTranslations() {
-                const lang = localStorage.getItem('lang') || 'en';
-                const databaseURL = 'https://conevishs-default-rtdb.firebaseio.com/translations/' + lang + '.json';
+                const databaseURL = 'https://conevishs-default-rtdb.firebaseio.com/FAQtranslations/' + lang + '.json'; // URL per la lingua
 
                 fetch(databaseURL)
                     .then(response => {
@@ -63,8 +65,8 @@
                         return response.json();
                     })
                     .then(translations => {
-                        // Specifico per la FAQ Page
                         document.getElementById('faqpage-title').textContent = translations.faqpage.title;
+                        document.getElementById('faqpage-subtitle').textContent = translations.faqpage.subtitle;
                         document.getElementById('faqpage-question1').textContent = translations.faqpage.question1;
                         document.getElementById('faqpage-answer1').textContent = translations.faqpage.answer1;
                         document.getElementById('faqpage-question2').textContent = translations.faqpage.question2;
@@ -85,17 +87,43 @@
                         document.getElementById('faqpage-answer9').textContent = translations.faqpage.answer9;
                         document.getElementById('faqpage-question10').textContent = translations.faqpage.question10;
                         document.getElementById('faqpage-answer10').textContent = translations.faqpage.answer10;
-                        // Add additional questions and answers as needed
-                    })
-                    .catch(error => console.error('Error loading translations:', error));
+                        // });
+
+                        setLanguageSelect(lang);
+                    });
             }
 
-            // Carica i componenti HTML, quindi carica le traduzioni
-            loadIncludes().then(() => {
-                loadTranslations();
-            });
-        });
+            // Funzione per impostare il selettore della lingua
+            function setLanguageSelect(lang) {
+                const languageSelects = document.querySelectorAll('#language-select');
+                languageSelects.forEach(select => {
+                    select.value = lang;
+                });
+            }
 
+            // Funzione per aggiornare la lingua
+            function updateLanguage(newLang) {
+                lang = newLang;
+                localStorage.setItem('lang', lang);
+                loadTranslations();
+                setLanguageSelect(lang);
+            }
+
+            // Event listener per il cambio di lingua
+            document.addEventListener('change', function (event) {
+                if (event.target.id === 'language-select') {
+                    updateLanguage(event.target.value);
+                }
+            });
+
+            // Carica i componenti HTML, quindi imposta la lingua e carica le traduzioni
+            loadIncludes().then(() => {
+                lang = localStorage.getItem('lang') || 'en';
+                setLanguageSelect(lang);
+                loadTranslations();
+            }).catch(error => console.error('Error loading includes:', error));
+
+        });
 
 
     </script>
