@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="css/jobListing.css">
+</head>
+
+<body>
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="english">English</option>
+            <option value="italiano">Italiano</option>
+            <option value="romanian">Română</option>
+        </select>
+    </div>
+
+    <div class="filter-section">
+        <div class="filter-box">
+            <div class="filter-title" data-translate>Filter</div>
+            
+            <select class="filter-select">
+                <option value="" data-translate>Location</option>
+            </select>
+            <select class="filter-select">
+                <option value="" data-translate>Category</option>
+            </select>
+            <select class="filter-select">
+                <option value="" data-translate>Experience</option>
+            </select>
+            <select class="filter-select">
+                <option value="" data-translate>Job type</option>
+            </select>
+            <select class="filter-select">
+                <option value="" data-translate>Qualification</option>
+            </select>
+            <select class="filter-select">
+                <option value="" data-translate>Gender</option>
+            </select>
+            <div class="price-range">
+                <div data-translate>Monthly salary average:</div>
+                <input type="range" class="price-slider" min="750" max="24600" step="100">
+                <div >$750 - $24600</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-listings">
+        <div class="job-header">
+            <div class="job-title" data-translate>Job Listing</div>
+            <div class="job-sort">
+                <span data-translate>Sort by:</span>
+                <select>
+                    <option data-translate>Most Recent</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="job-listings-container"></div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/95262f3767.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase (use your config)
+        const firebaseConfig = {
+            apiKey: "AIzaSyB3lGuUiHG3wxrzKf6cPfD50xgt60dbqAg",
+            authDomain: "conevishs.firebaseapp.com",
+            databaseURL: "https://conevishs-default-rtdb.firebaseio.com",
+            projectId: "conevishs",
+            storageBucket: "conevishs.appspot.com",
+            messagingSenderId: "920921649335",
+            appId: "1:920921649335:web:4c7918cd0d8bce86cadd32",
+            measurementId: "G-ZNK22L4J98"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const jobListingsContainer = document.getElementById('job-listings-container');
+        const languageSelect = document.getElementById('languageSelect');
+
+        function createJobListing(job, id) {
+            return `
+               <div class="job-listing">
+                <img src="${job.immagine}" alt="${job.titolo}" class="job-image">
+                <div class="job-details">
+                    <div class="job-position" data-translate>${job.titolo}</div>
+                    <div class="job-info">
+                        <span><i class="fas fa-map-marker-alt"></i> <span data-translate>${job.località}</span></span>
+                        <span><i class="far fa-clock"></i> <span data-translate>${job.oreSettimanali} hours per week</span></span>
+                    </div>
+                    <div class="job-date"><span data-translate>Date line: 31 Jan 2020</span></div>
+                </div>
+                <div class="job-actions">
+                    <button class="apply-button" onclick="window.location.href='jobPage.html?id=${id}'" data-translate>Apply Now</button>
+                </div>
+            </div>
+            `;
+        }
+
+        function loadJobListings() {
+        const dbRef = firebase.database().ref('offerte-di-lavoro');
+        dbRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            let jobListingsHTML = '';
+            for (let key in data) {
+                if (data.hasOwnProperty(key)) {
+                    jobListingsHTML += createJobListing(data[key], key);
+                }
+            }
+            jobListingsContainer.innerHTML = jobListingsHTML;
+            translatePage(languageSelect.value);
+        });
+    }
+
+        async function translateTexts(texts, targetLanguage) {
+        try {
+            const response = await fetch('https://ai-cone-vis.vercel.app/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ texts, targetLanguage })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data.translations;
+        } catch (error) {
+            console.error('Translation error:', error);
+            return texts; // Restituisce i testi originali se la traduzione fallisce
+        }
+    }
+
+    async function translatePage(language) {
+        const elements = document.querySelectorAll('[data-translate]');
+        const placeholders = document.querySelectorAll('[data-translate-placeholder]');
+        
+        const textsToTranslate = [...elements].map(el => el.textContent);
+        textsToTranslate.push(...[...placeholders].map(el => el.getAttribute('placeholder')));
+        
+        const translatedTexts = await translateTexts(textsToTranslate, language);
+        
+        elements.forEach((element, index) => {
+            element.textContent = translatedTexts[index];
+        });
+        
+        placeholders.forEach((element, index) => {
+            element.setAttribute('placeholder', translatedTexts[index + elements.length]);
+        });
+    }
+
+        languageSelect.addEventListener('change', (event) => {
+            translatePage(event.target.value);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadJobListings();
+        });
+    </script>
+</body>
+
+</html>
