@@ -9,7 +9,6 @@
     <title>ConeVis | Human Resources</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/card.css">
-
 </head>
 
 <body>
@@ -22,7 +21,7 @@
         <div class="hero-content" id="hero">
             <img id="hero-logo" src="images/logo.png" alt="Logo">
             <p id="hero-subtitle" class="hero-subtitle"></p><br>
-            <a href="#services" class="cta-button" id="hero-bt_cta"></a>
+            <a href="jobListing.html" class="cta-button" id="hero-bt_cta"></a>
         </div>
     </section>
 
@@ -34,12 +33,11 @@
     </section>
 
 
-    <!--  Sezione Servizi -->
-    <!-- <div class="services">
+        <!-- <div class="services">
         <h2 id="services-title"></h2>
-        <p id="services-description"></p> -->
-    <!-- Contenitore scorrevole per le card dei servizi -->
-    <!-- <div class="service-cards">
+        <p id="services-description"></p>
+         Contenitore scorrevole per le card dei servizi
+         <div class="service-cards">
             <a class="card" href="index.html" id="button-flower" onclick="handleClick('flower')">
                 <h3 id="card-flower-title"></h3>
                 <p id="card-flower-description"></p>
@@ -65,7 +63,7 @@
                 <p id="card-construction-description"></p>
             </a>
         </div>
-    </div> -->
+    </div>  -->
 
 
     <div id="services" class="services">
@@ -73,7 +71,7 @@
         <p id="services-description"></p>
 
         <div class="predisposition">
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description" >
                     <div class="logo">
                         <span class="circle circle4">
@@ -125,7 +123,7 @@
             </div>
 
 
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description">
                     <div class="logo">
                         <span class="circle circle4">
@@ -178,7 +176,7 @@
             </div>
 
 
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description">
                     <div class="logo">
                         <span class="circle circle4">
@@ -235,7 +233,7 @@
 
 
         <div class="predisposition">
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description">
                     <div class="logo">
                         <span class="circle circle4">
@@ -288,7 +286,7 @@
             </div>
 
 
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description">
                     <div class="logo">
                         <span class="circle circle4">
@@ -341,7 +339,7 @@
             </div>
 
 
-            <div class="parent" onclick="window.location.href='https://uiverse.io/buttons';">
+            <div class="parent">
                 <div class="card" data-country="prova country" data-title="prova title" data-description="prova description">
                     <div class="logo">
                         <span class="circle circle4">
@@ -493,7 +491,7 @@
             const description = card.getAttribute('data-description');
             
             // Reindirizza a opportunita.html con i parametri in URL
-            window.location.href = `opportunita.html?country=${encodeURIComponent(country)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+            window.location.href = `jobListing.html?country=${encodeURIComponent(country)}&title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
         });
     });
 </script>

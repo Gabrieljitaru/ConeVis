@@ -7,89 +7,207 @@
     <title>Job Listings</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
+            display: flex;
+        }
+
+        .filter-section {
+            width: 250px;
+            margin-right: 20px;
+        }
+
+        .filter-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .filter-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        .price-range {
+            margin-top: 20px;
+        }
+
+        .price-slider {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .job-listings {
+            flex-grow: 1;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .job-sort {
+            display: flex;
+            align-items: center;
+        }
+
+        .job-sort select {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-left: 10px;
         }
 
         .job-listing {
             background-color: white;
             border-radius: 8px;
-            overflow: hidden;
+            padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .job-content {
-            display: flex;
-        }
-
-        .job-image {
-            width: 25%;
-            object-fit: cover;
-        }
-
-        .job-details {
-            width: 75%;
-            padding: 15px;
-        }
-
-        .job-category {
-            text-transform: uppercase;
-            color: #666;
-            font-size: 0.8em;
-        }
-
-        .job-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-
-        .job-info {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .job-info-item {
             display: flex;
             align-items: center;
         }
 
-        .job-requirements {
-            margin-top: 10px;
-            font-size: 0.9em;
+        .job-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            margin-right: 25px;
+            object-fit: cover;
         }
 
-        .more-info {
+        .job-details {
+            flex-grow: 1;
+        }
+
+        .job-position {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .job-info {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .job-info span {
+            margin-right: 15px;
+        }
+
+        .job-date {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .job-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .heart-icon {
+            color: #ccc;
+            font-size: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .heart-icon.active {
+            color: #ff6b6b;
+        }
+
+        .apply-button {
             background-color: #4CAF50;
             color: white;
-            text-align: right;
-            padding: 10px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .more-info-button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 1em;
+        .apply-button:hover {
+            background-color: #45a049;
         }
     </style>
-
 </head>
 
 <body>
+    <div class="filter-section">
+        <div class="filter-box">
+            <div class="filter-title">Filter</div>
+            <input type="text" class="filter-input" placeholder="Search keyword">
+            <select class="filter-select">
+                <option value="">Location</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Category</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Experience</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Job type</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Qualification</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Gender</option>
+            </select>
+            <div class="price-range">
+                <div>Price range:</div>
+                <input type="range" class="price-slider" min="750" max="24600" step="100">
+                <div>$750 - $24600/ Year</div>
+            </div>
+        </div>
+    </div>
 
-    
-    <div id="job-listings"></div>
+    <div class="job-listings">
+        <div class="job-header">
+            <div class="job-title">Job Listing</div>
+            <div class="job-sort">
+                <span>Sort by:</span>
+                <select>
+                    <option>Most Recent</option>
+                </select>
+            </div>
+        </div>
 
-
-
-
-
+        <div id="job-listings-container"></div>
+    </div>
 
     <script src="https://kit.fontawesome.com/95262f3767.js" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -108,31 +226,22 @@
         };
         firebase.initializeApp(firebaseConfig);
 
-        const jobListingsContainer = document.getElementById('job-listings');
+        const jobListingsContainer = document.getElementById('job-listings-container');
 
         function createJobListing(job, id) {
             return `
                 <div class="job-listing">
-                    <div class="job-content">
-                        <img src="${job.immagine}" alt="${job.titolo}" class="job-image">
-                        <div class="job-details">
-                            <div class="job-category">${job.categoria}</div>
-                            <h2 class="job-title">${job.titolo}</h2>
-                            <div class="job-info">
-                                <div class="job-info-item">
-                                    ${job.oreSettimanali} hours per week
-                                </div>
-                                <div class="job-info-item">
-                                    ${job.salario} € per hour
-                                </div>
-                                <div class="job-info-item">
-                                    ${job.località}
-                                </div>
-                            </div>
+                    <img src="${job.immagine}" alt="${job.titolo}" class="job-image">
+                    <div class="job-details">
+                        <div class="job-position">${job.titolo}</div>
+                        <div class="job-info">
+                            <span><i class="fas fa-map-marker-alt"></i> ${job.località}</span>
+                            <span><i class="far fa-clock"></i> ${job.oreSettimanali} hours per week</span>
                         </div>
+                        <div class="job-date">Date line: 31 Jan 2020</div>
                     </div>
-                    <div class="more-info">
-                        <button class="more-info-button" onclick="window.location.href='jobPage.html?id=${id}'">View more →</button>
+                    <div class="job-actions">
+                        <button class="apply-button onclick="window.location.href='jobPage.html?id=${id}'">Apply Now</button>
                     </div>
                 </div>
             `;
@@ -145,7 +254,7 @@
                 let jobListingsHTML = '';
                 for (let key in data) {
                     if (data.hasOwnProperty(key)) {
-                        jobListingsHTML += createJobListing(data[key], key); // Pass the job ID
+                        jobListingsHTML += createJobListing(data[key], key);
                     }
                 }
                 jobListingsContainer.innerHTML = jobListingsHTML;

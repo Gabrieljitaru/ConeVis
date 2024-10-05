@@ -6,35 +6,87 @@
 
 /* Stili per la barra di navigazione */
 .navbar {
-    background: #1888ce; /* Sfondo scuro traslucido */
-    position: fixed; /* Fissa la barra di navigazione in alto */
-    width: 100%; /* Larghezza completa */
-    top: 0; /* Posiziona in alto */
-    z-index: 1000; /* Porta la barra sopra gli altri contenuti */
+    background: #1888ce;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Ridotta altezza della navbar */
+    display: flex;
+    align-items: center; /* Allinea verticalmente gli elementi */
 }
 
 .navbar ul {
-    list-style: none; /* Rimuove i punti elenco */
-    display: flex; /* Usa Flexbox per allineare gli elementi */
-    justify-content: center; /* Centra gli elementi */
-    padding: 1rem; /* Padding interno */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0; /* Elimina il padding extra */
+    margin: 0;
 }
 
 .navbar li {
-    margin: 0 20px; /* Spaziatura tra i pulsanti */
+    margin: 0 20px; /* Mantiene la spaziatura tra i pulsanti */
 }
 
 .navbar a {
-    color: white; /* Colore del testo */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    font-family: 'Lexend', sans-serif; /* Usa il font Lexend */
-    font-weight: 600; /* Peso del carattere */
-    transition: color 0.3s; /* Transizione per il colore */
+    color: white;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 16px; /* Mantiene la dimensione del font originale */
+    transition: color 0.3s;
+    padding: 0; /* Elimina padding verticale */
 }
 
 .navbar a:hover {
-    color: #FFD700; /* Colore dorato al passaggio del mouse */
+    color: #FFD700;
 }
+
+
+
+/* Stili per la barra di navigazione corta */
+.navbarshort {
+    background: #1888ce;
+    position: fixed;
+    max-width: 900px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    height: 50px; /* Altezza ridotta per rendere la barra più sottile */
+    display: flex;
+    align-items: center;
+}
+
+.navbarshort ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbarshort li {
+    margin: 0 15px; /* Ridotto lo spazio tra gli elementi per adattarsi alla nuova altezza */
+}
+
+.navbarshort a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 16px; /* Ridotto il font per adattarsi alla navbar più sottile */
+    transition: color 0.3s;
+    padding: 0; /* Elimina il padding extra */
+}
+
+.navbarshort a:hover {
+    color: #FFD700;
+}
+
 
 /* Stile per il selettore della lingua */
 #language-toggle {
@@ -330,7 +382,7 @@ body {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 2px 10px #2595bec2;
+    box-shadow: 0 2px 10px #756d6dc9;
     width: 45%; /* Imposta larghezza per permettere che stiano affiancati */
     text-align: center;
 }
@@ -348,7 +400,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     z-index: 1; /* Assicura che si sovrapponga agli altri elementi */
-    box-shadow: 0 2px 10px #2595bec2;
+    box-shadow: 0 2px 10px #756d6dc9;
 }
 
 /* Titoli dei moduli */

@@ -38,7 +38,7 @@ const translations = {
         "services": {
             "title": "See, Click and Apply Now!",
             "description": "we help you connect with qualified companies across Europe",
-            "viewmore": "View more",
+            "viewmore": "View all opportunities",
             "cards": {
                 "one": {
                     "country": "France",
@@ -149,7 +149,7 @@ const translations = {
         "services": {
             "title": "Guarda, Clicca e Candidati Ora!",
             "description": "ti aiutiamo a connetterti con aziende qualificate in tutta Europa",
-            "viewmore": "Vedi di più",
+            "viewmore": "Vedi tutte le offerte",
             "cards": {
                 "one": {
                     "country": "Francia",
@@ -256,7 +256,7 @@ const translations = {
         "services": {
             "title": "Vezi, Clic și Aplică acum!",
             "description": "Te ajutăm să te conectezi cu companii calificate din toată Europa",
-            "viewmore": "Vezi mai multe",
+            "viewmore": "Vezi toate ofertele",
             "cards": {
                 "one": {
                     "country": "Franța",
