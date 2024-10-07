@@ -97,6 +97,29 @@
     font-weight: 600;
 }
 
+#languageSelect {
+    margin-left: 10px; /* Spazio tra il link e il selettore */
+    background-color: #147ab9; /* Sfondo scuro per il selettore */
+    color: white; /* Testo bianco */
+    border: none; /* Rimuove il bordo di default */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 5px; /* Padding interno */
+    font-family: 'Lexend', sans-serif; /* Font coerente */
+    font-weight: 600; /* Peso del carattere */
+    transition: background-color 0.3s; /* Transizione per lo sfondo */
+}
+
+#languageSelect:hover {
+    background-color: #FFD700; /* Sfondo dorato al passaggio del mouse */
+    color: black; /* Testo nero in hover */
+}
+
+#languageSelect option.active {
+    background-color: #1888ce; /* Colore di sfondo per l'opzione attiva */
+    color: white; /* Colore del testo per l'opzione attiva */
+}
+
+
 #language-select {
     margin-left: 10px; /* Spazio tra il link e il selettore */
     background-color: #147ab9; /* Sfondo scuro per il selettore */
@@ -487,7 +510,7 @@ footer {
     position: absolute;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     width: 100%;
     bottom: 0;
     left: 0;

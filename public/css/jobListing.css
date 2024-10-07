@@ -1,14 +1,35 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
     margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0px 1fr; /* Colonna per i filtri + colonna per il contenuto principale */
+    grid-gap: 0px; /* Spazio tra le colonne */
+    justify-content: center; /* Centra la griglia */
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 20px auto; /* Centra il contenitore orizzontalmente */
+    background-color: #1888ce57;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    flex-grow: 1; /* Permette alla sezione di espandersi verticalmente fino a riempire lo spazio disponibile */
     display: flex;
+    flex-direction: column; /* Dispone il contenuto interno verticalmente */
 }
 
 .filter-section {
-    width: 250px;
-    margin-right: 20px;
+    width: 250px; /* Larghezza fissa della sezione filtri */
+    position: sticky;
+    top: 100px; /* Spazio per la navbar */
+    align-self: flex-start;
+    background-color: rgb(236, 233, 233); /* Imposta uno sfondo */
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .filter-box {
@@ -36,8 +57,8 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #dad7d7;
+    border-radius: 20px;
     appearance: none;
     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     background-repeat: no-repeat;
@@ -53,41 +74,59 @@ body {
     margin-top: 10px;
 }
 
+
+
 .job-listings {
     flex-grow: 1;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto; /* Centrare il contenuto */
 }
 
 .job-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: row; /* Dispone gli elementi in riga */
+    justify-content: space-between; /* Spaziatura tra titolo e sort */
+    align-items: center; /* Allinea verticalmente al centro */
+    margin-bottom: 10px;
+    width: 100%;
 }
 
+/* Titolo fissato a sinistra */
 .job-title {
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px; /* Spazio sotto il titolo */
+    align-self: center; /* Allinea verticalmente al centro (se necessario) */
 }
 
+/* Selettore fissato a destra */
 .job-sort {
     display: flex;
     align-items: center;
+    justify-content: flex-end; /* Mantiene il sort allineato a destra */
+    width: 100%;
 }
+
 
 .job-sort select {
     padding: 5px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #f9f5f5;
     border-radius: 4px;
-    margin-left: 10px;
+    margin-left: 0; /* Nessun margine a sinistra */
+    margin-top: 0; /* Se necessario, regolare il margine in alto */
 }
 
+/* Lista dei lavori sotto */
 .job-listing {
-    background-color: white;
-    border-radius: 8px;
+    background-color: #ffffff60;
+    border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta di ombra */
+    width: 100%; /* Assicura che l'elenco occupi tutta la larghezza */
 }
 
 .job-image {
@@ -111,7 +150,7 @@ body {
 .job-info {
     display: flex;
     align-items: center;
-    color: #666;
+    color: #000000a3;
     font-size: 14px;
 }
 
@@ -120,7 +159,7 @@ body {
 }
 
 .job-date {
-    color: #999;
+    color: #000000c7;
     font-size: 12px;
 }
 
@@ -129,23 +168,13 @@ body {
     align-items: center;
 }
 
-.heart-icon {
-    color: #ccc;
-    font-size: 24px;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.heart-icon.active {
-    color: #ff6b6b;
-}
 
 .apply-button {
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 14px;
 }
@@ -153,3 +182,5 @@ body {
 .apply-button:hover {
     background-color: #45a049;
 }
+
+

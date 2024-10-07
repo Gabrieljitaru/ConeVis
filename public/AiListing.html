@@ -6,21 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
     <link rel="stylesheet" href="css/jobListing.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
+
 <body>
-    <div class="language-selector">
-        <select id="languageSelect">
-            <option value="english">English</option>
-            <option value="italiano">Italiano</option>
-            <option value="romanian">Română</option>
-        </select>
-    </div>
 
     <div class="filter-section">
         <div class="filter-box">
             <div class="filter-title" data-translate>Filter</div>
-            
+
             <select class="filter-select">
                 <option value="" data-translate>Location</option>
             </select>
@@ -42,12 +37,30 @@
             <div class="price-range">
                 <div data-translate>Monthly salary average:</div>
                 <input type="range" class="price-slider" min="750" max="24600" step="100">
-                <div >$750 - $24600</div>
+                <div>$750 - $24600</div>
             </div>
         </div>
     </div>
 
-    <div class="job-listings">
+    <div class="main-container">
+        <nav class="navbarshort">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AiListing.html" id="nav-opportunities">Opportunities</a></li>
+                <li><a href="index.html#contact-section" id="nav-application">Application</a></li>
+                <li id="language-toggle">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="english">🇬🇧 English</option>
+                            <option value="italiano">🇮🇹 Italiano</option>
+                            <option value="romanian">🇷🇴 Română</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <br>
+
         <div class="job-header">
             <div class="job-title" data-translate>Job Listing</div>
             <div class="job-sort">
@@ -56,9 +69,11 @@
                     <option data-translate>Most Recent</option>
                 </select>
             </div>
+        </div>        
+        <div class="job-listings">
+            <div id="job-listings-container"></div>
         </div>
-
-        <div id="job-listings-container"></div>
+        
     </div>
 
     <script src="https://kit.fontawesome.com/95262f3767.js" crossorigin="anonymous"></script>
@@ -101,59 +116,59 @@
         }
 
         function loadJobListings() {
-        const dbRef = firebase.database().ref('offerte-di-lavoro');
-        dbRef.on('value', (snapshot) => {
-            const data = snapshot.val();
-            let jobListingsHTML = '';
-            for (let key in data) {
-                if (data.hasOwnProperty(key)) {
-                    jobListingsHTML += createJobListing(data[key], key);
+            const dbRef = firebase.database().ref('offerte-di-lavoro');
+            dbRef.on('value', (snapshot) => {
+                const data = snapshot.val();
+                let jobListingsHTML = '';
+                for (let key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        jobListingsHTML += createJobListing(data[key], key);
+                    }
                 }
-            }
-            jobListingsContainer.innerHTML = jobListingsHTML;
-            translatePage(languageSelect.value);
-        });
-    }
+                jobListingsContainer.innerHTML = jobListingsHTML;
+                translatePage(languageSelect.value);
+            });
+        }
 
         async function translateTexts(texts, targetLanguage) {
-        try {
-            const response = await fetch('https://ai-cone-vis.vercel.app/api/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ texts, targetLanguage })
+            try {
+                const response = await fetch('https://ai-cone-vis.vercel.app/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ texts, targetLanguage })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.translations;
+            } catch (error) {
+                console.error('Translation error:', error);
+                return texts; // Restituisce i testi originali se la traduzione fallisce
+            }
+        }
+
+        async function translatePage(language) {
+            const elements = document.querySelectorAll('[data-translate]');
+            const placeholders = document.querySelectorAll('[data-translate-placeholder]');
+
+            const textsToTranslate = [...elements].map(el => el.textContent);
+            textsToTranslate.push(...[...placeholders].map(el => el.getAttribute('placeholder')));
+
+            const translatedTexts = await translateTexts(textsToTranslate, language);
+
+            elements.forEach((element, index) => {
+                element.textContent = translatedTexts[index];
             });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            return data.translations;
-        } catch (error) {
-            console.error('Translation error:', error);
-            return texts; // Restituisce i testi originali se la traduzione fallisce
+            placeholders.forEach((element, index) => {
+                element.setAttribute('placeholder', translatedTexts[index + elements.length]);
+            });
         }
-    }
-
-    async function translatePage(language) {
-        const elements = document.querySelectorAll('[data-translate]');
-        const placeholders = document.querySelectorAll('[data-translate-placeholder]');
-        
-        const textsToTranslate = [...elements].map(el => el.textContent);
-        textsToTranslate.push(...[...placeholders].map(el => el.getAttribute('placeholder')));
-        
-        const translatedTexts = await translateTexts(textsToTranslate, language);
-        
-        elements.forEach((element, index) => {
-            element.textContent = translatedTexts[index];
-        });
-        
-        placeholders.forEach((element, index) => {
-            element.setAttribute('placeholder', translatedTexts[index + elements.length]);
-        });
-    }
 
         languageSelect.addEventListener('change', (event) => {
             translatePage(event.target.value);
